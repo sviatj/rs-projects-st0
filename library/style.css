@@ -7,6 +7,7 @@ scroll-behavior: smooth;
 }
 
 body {
+
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -21,8 +22,6 @@ padding: 0;
 max-width: 1440px;
 margin: 0 auto;
 }
-
-
 
 @font-face {
 font-family: inter;
@@ -40,10 +39,8 @@ flex-direction: row;
 justify-content: space-between;
 flex-wrap: no-wrap;
 
-
 height: 90px;
 background: #0C0C0E;
-
 }
 
 h3 {
@@ -51,7 +48,6 @@ color: #FFF;
 text-align: center;
 font-family: Forum;
 font-size: 40px;
-font-style: normal;
 font-weight: 400;
 line-height: 50px;
 letter-spacing: 3px;
@@ -81,8 +77,6 @@ padding-left: 0px;
 line-height: 24px;
 }
 
-
-
 .nav-link {
 padding-inline-start: 0px;
 margin: 15px;
@@ -91,16 +85,13 @@ text-decoration: none;
 list-style: none;
 font-family: inter;
 font-size: 20px;
-font-style: normal;
 font-weight: 400;
 }
-
 
 h1 {
 color: #FFF;
 font-family: forum;
 font-size: 30px;
-font-style: normal;
 font-weight: 400;
 letter-spacing: 0.6px;
 text-align: center;
@@ -110,7 +101,6 @@ line-height: 50px;
 .header-profile-icon {
 display: flex;
 justify-content: flex-end;
-align-items: center;
 padding-right: 55px;
 background: url("./assets/icons/icon_profile.png");
 background-repeat: no-repeat;
@@ -121,7 +111,6 @@ height: 28px;
 .welcome-section {
 height: 600px;
 }
-
 
 .h3-box {
 position: absolute;
@@ -155,13 +144,12 @@ background-image: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18
 h2 {
 display: flex;
 justify-content: center;
-align-items: flex-start;
 
+margin-top: 20px;
 
 color: #0C0C0E;
-font-family: Forum;
+font-family: forum;
 font-size: 40px;
-font-style: normal;
 font-weight: 400;
 line-height: 40px;
 letter-spacing: 2px;
@@ -174,7 +162,107 @@ width: 50px;
 content: '';
 border-top: 1px solid black;
 
-
 position: absolute;
 z-index: -1;
 }
+
+.library-description {
+display: flex;
+justify-content: center;
+padding-top: 35px;
+
+font-family: inter;
+font-size: 20px;
+font-weight: 400;
+line-height: 20px;
+}
+
+.pictures-row {
+display: flex;
+padding-top: 0;
+}
+
+.picture-column {
+flex: 33.33%;
+padding: 13px;
+}
+
+.pagination-container {
+display: flex;
+justify-content: center;
+padding-top: 10px;
+margin-bottom: 55px;
+}
+
+.circle {
+display: block;
+margin: 5px;
+width: 16px;
+height: 16px;
+border-radius: 50%;
+background: #0C0C0E;
+}
+
+#circle-1 {
+background: #BB945F;
+}
+
+.pick-title {
+display: flex;
+flex-direction: row;
+padding-left: 20px;
+padding-top: 30px;
+
+text-align: left;
+font-family: inter;
+font-size: 20px;
+font-weight: 700;
+}
+
+/*Radio button section */
+
+.radio-btn-container {
+display: flex;
+flex-direction: row;
+
+font-family: Inter;
+font-size: 20px;
+
+padding-top: 25px;
+padding-left: 20px;
+}
+
+input[type="radio"] {
+-webkit-appearance: none;
+appearance: none;
+}
+
+input[type="radio"] {
+margin: 0;
+width: 17px;
+height: 17px;
+border: 2px solid black;
+border-radius: 50%;
+
+display: grid;
+place-content: center;
+}
+
+input[type="radio"]::before {
+content: "";
+width: 6px;
+height: 6px;
+border-radius: 50%;
+transform: scale(0);
+box-shadow: inset 6px 6px;
+}
+
+input[type="radio"]:checked::before {
+transform: scale(1);
+}
+
+label {
+  padding: 0 90px 0 20px;
+  margin-top: -4px;
+}
+ /*End of radio button section*/ 

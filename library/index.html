@@ -22,7 +22,7 @@
             <ul class="nav-list">
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#favorites" class="nav-link">Favorites</a></li>
-                <li class="nav-item"><a href="#coffee-shop" class="nav-link">Coffee Shop</a></li>
+                <li class="nav-item"><a href="#coffee-shop" class="nav-link">Coffee shop</a></li>
                 <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
                 <li class="nav-item"><a href="#library-card" class="nav-link">Library Card</a></li>
             </ul>
@@ -44,23 +44,83 @@
         </section>
         <section class="about-section" id="about">
             <h2>About</h2>
-            <p>
+            <p class="library-description">
                 The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside 
             </p>
+            <div class="pictures-row">
+                <div class="picture-column">
+                    <img src="assets/slider-img/image 1.png" alt="girl" style="width:100%">
+                </div>
+                <div class="picture-column">
+                    <img src="assets/slider-img/image 2.png" alt="statues" style="width:100%">
+                </div>
+                <div class="picture-column">
+                    <img src="assets/slider-img/image 3.png" alt="library" style="width:100%">
+                </div>
+            </div>
+            <div class="pagination-container">
+                <a class="pagination" href="#"><span class="circle" id="circle-1"></span></a>
+                <a class="pagination" href="#"><span class="circle"></span></a>
+                <a class="pagination" href="#"><span class="circle"></span></a>
+            </div>
         </section>
         <section class="favorites-section" id="favorites">
             <h2>Favorites</h2>
-            <p>
+            <p class="pick-title">
                 Pick favorites of season
             </p>
-            <input type="radio" id="winter" name="season" checked>
-            <label for="winter">Winter</label><br>
-            <input type="radio" id="winter" name="season" disabled>
+            <div class="radio-btn-container">
+            <input type="radio" id="winter" name="radio" checked>
+            <label for="winter"><b>Winter</b></label><br>
+            <input type="radio" id="spring" name="radio">
             <label for="winter">Spring</label><br>
-            <input type="radio" id="winter" name="season" disabled>
+            <input type="radio" id="summer" name="radio">
             <label for="winter">Summer</label><br>
-            <input type="radio" id="winter" name="season" disabled>
+            <input type="radio" id="autumn" name="radio">
             <label for="winter">Autumn</label><br>
+            </div>
+            <div class="winter-favorites">
+                <div class="item-1">
+                <div class="tag-title">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-title">The Book Eaters By Sunyi Dean</p>
+                    <p class="book-description">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
+                </div>
+                <div class="buy-btn">
+                <p>Buy</p>
+                </div>
+                </div>
+            <div class="item-2">
+                <div class="tag-title">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-title">Cackle By Rachel Harrison</p>
+                    <p class="book-description">Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
+                </div>
+                <div class="buy-btn">
+                    <p>Buy</p>
+                    </div>
+                </div>
+            <div class="item-3">
+                <div class="tag-title">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-title">Dante: Poet of the Secular World By Erich Auerbach</p>
+                    <p class="book-description">Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
+                </div>
+                <div class="buy-btn">
+                    <p>Buy</p>
+                    </div>
+                </div>
+            <div class="item-4">
+                <div class="tag-title">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-title">The Last Queen By Clive Irving</p>
+                    <p class="book-description">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
+                </div>
+                <div class="buy-btn">
+                    <p>Buy</p>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="coffee-shop-section" id="coffee-shop">
             <h2>Coffee shop</h2>
