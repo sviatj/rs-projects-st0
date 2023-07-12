@@ -5,24 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon/favicon.png">
 </head>
 <body>
     <div class="container">
     <header class="header">
+        <div class="h1-container">
+        <div class="h1-box">
         <h1>Brooklyn Public Library</h1>
+        </div>
+        </div>
+        <div class="nav-box">
+            <div class="nav-list-container">
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#favorites" class="nav-link">Favorites</a></li>
-                <li class="nav-item"><a href="#cofee-shop" class="nav-link">Cofee Shop</a></li>
+                <li class="nav-item"><a href="#coffee-shop" class="nav-link">Coffee Shop</a></li>
                 <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
                 <li class="nav-item"><a href="#library-card" class="nav-link">Library Card</a></li>
             </ul>
+        </nav>
+        <div class="profile-icon"><a href="#"><span class="header-profile-icon"></span></a></div>
+        </div>
+        </div>
     </header>
     <main class="main">
         <div class="main-container">
         <section class="welcome-section">
-            <h3>Welcome to the Brooklyn Library</h3>
+            <div class="bg-picture">
+            <div class="h3-box">
+                <div class="h3-text-box">
+            <h3>Welcome <br> to the Brooklyn Library</h3>
+            </div>
+           </div>
+        </div>
         </section>
         <section class="about-section" id="about">
             <h2>About</h2>
@@ -32,8 +50,19 @@
         </section>
         <section class="favorites-section" id="favorites">
             <h2>Favorites</h2>
+            <p>
+                Pick favorites of season
+            </p>
+            <input type="radio" id="winter" name="season" checked>
+            <label for="winter">Winter</label><br>
+            <input type="radio" id="winter" name="season" disabled>
+            <label for="winter">Spring</label><br>
+            <input type="radio" id="winter" name="season" disabled>
+            <label for="winter">Summer</label><br>
+            <input type="radio" id="winter" name="season" disabled>
+            <label for="winter">Autumn</label><br>
         </section>
-        <section class="cofee-shop-section" id="cofee-shop">
+        <section class="coffee-shop-section" id="coffee-shop">
             <h2>Coffee shop</h2>
             <p>
                 In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. you can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.
