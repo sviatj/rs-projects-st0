@@ -7,15 +7,15 @@ scroll-behavior: smooth;
 }
 
 body {
-
 display: flex;
-flex-direction: column;
+flex-direction: row;
 justify-content: space-between;
-min-width: 200px;
-min-height: 100vh;
+min-width: 600px;
+min-height: 500vh;
+flex-wrap: wrap;
 
-margin: 0;
 padding: 0;
+margin: 0;
 }
 
 .container {
@@ -33,25 +33,15 @@ font-family: forum;
 src: url("fonts/Forum/Forum-Regular.ttf");
 }
 
+/* Header section */
+
 .header{
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-flex-wrap: no-wrap;
 
 height: 90px;
 background: #0C0C0E;
-}
-
-h3 {
-color: #FFF;
-text-align: center;
-font-family: Forum;
-font-size: 40px;
-font-weight: 400;
-line-height: 50px;
-letter-spacing: 3px;
-text-transform: uppercase;
 }
 
 .h1-box {
@@ -63,22 +53,19 @@ margin: 20px;
 display: flex;
 align-items: center;
 height: 90px;
-
-padding-top: 20px;
-padding-bottom: 20px;
+padding: 20px 0;
 }
 
 .nav-list {
 display: flex;
 justify-content: flex-end;
 align-items: center;
-margin: 0 18px 0 0;
+margin: 0 25px 0 0;
 padding-left: 0px;
 line-height: 24px;
 }
 
 .nav-link {
-padding-inline-start: 0px;
 margin: 15px;
 color: #FFF;
 text-decoration: none;
@@ -101,15 +88,28 @@ line-height: 50px;
 .header-profile-icon {
 display: flex;
 justify-content: flex-end;
-padding-right: 55px;
-background: url("./assets/icons/icon_profile.png");
+margin-right: 20px;
+background: url("./assets/icons/icon_profile.svg");
 background-repeat: no-repeat;
 width: 28px;
 height: 28px;
 }
 
+/* welcome section*/
+
 .welcome-section {
 height: 600px;
+}
+
+h3 {
+color: #FFF;
+text-align: center;
+font-family: Forum;
+font-size: 40px;
+font-weight: 400;
+line-height: 50px;
+letter-spacing: 3px;
+text-transform: uppercase;
 }
 
 .h3-box {
@@ -141,6 +141,8 @@ background-repeat: no-repeat;
 background-image: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%), url("./assets/welcome-img.png");
 }
 
+/* about section*/
+
 h2 {
 display: flex;
 justify-content: center;
@@ -163,7 +165,6 @@ content: '';
 border-top: 1px solid black;
 
 position: absolute;
-z-index: -1;
 }
 
 .library-description {
@@ -179,7 +180,6 @@ line-height: 20px;
 
 .pictures-row {
 display: flex;
-padding-top: 0;
 }
 
 .picture-column {
@@ -209,17 +209,15 @@ background: #BB945F;
 
 .pick-title {
 display: flex;
-flex-direction: row;
-padding-left: 20px;
-padding-top: 30px;
+align-items: center;
+padding: 30px 0 20px 20px;
 
-text-align: left;
 font-family: inter;
 font-size: 20px;
 font-weight: 700;
 }
 
-/*Radio button section */
+/* favorites / Radio button section */
 
 .radio-btn-container {
 display: flex;
@@ -228,7 +226,7 @@ flex-direction: row;
 font-family: Inter;
 font-size: 20px;
 
-padding-top: 25px;
+margin-top: 30px;
 padding-left: 20px;
 }
 
@@ -244,6 +242,7 @@ height: 17px;
 border: 2px solid black;
 border-radius: 50%;
 
+
 display: grid;
 place-content: center;
 }
@@ -255,6 +254,8 @@ height: 6px;
 border-radius: 50%;
 transform: scale(0);
 box-shadow: inset 6px 6px;
+
+transition: 120ms transform ease-in-out;
 }
 
 input[type="radio"]:checked::before {
@@ -262,7 +263,151 @@ transform: scale(1);
 }
 
 label {
-  padding: 0 90px 0 20px;
-  margin-top: -4px;
+padding: 0 90px 0 20px;
+margin-top: -4px;
 }
- /*End of radio button section*/ 
+/*End of radio button section*/ 
+
+.winter-favorites {
+display: flex;
+flex-wrap: wrap;
+}
+
+.item-1, .item-2, .item-3, .item-4 {   
+width: 550px;
+height: 555px;
+border: solid 1px #0C0C0E;
+margin-top: 36px;    
+}
+
+.item-1, .item-3 {
+margin-left: 20px;
+}
+
+.item-2, .item-4 {
+margin-left: 260px; 
+}
+
+.tag-title-h4 {
+font-family: Forum;
+font-size: 20px;
+font-weight: 400;
+line-height: 40px;
+letter-spacing: 2px;
+text-transform: capitalize;
+
+margin: 15px 0 10px 20px;
+}
+
+.book-info, .book-title {
+
+font-family: Inter;
+font-size: 15px;
+font-weight: 700;
+line-height: 40px;
+letter-spacing: 2px;
+
+margin: 20px 20px;
+}
+
+.book-title {
+text-transform: uppercase;
+margin-left: 0;
+}
+
+.book-description {
+display: flex;
+width: 380px;
+flex-direction: column;
+justify-content: center;
+
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px;
+letter-spacing: 2px;
+text-transform: capitalize;
+
+padding: 0 0px 0px 20px;
+}
+
+.buy-btn-1, .buy-btn-2, .buy-btn-3, .buy-btn-4 {
+position: absolute;
+border-radius: 2px;
+border: 1px solid #0C0C0E;
+width: 75px;
+height: 30px; 
+
+background-color: #FFF;
+
+color: #0C0C0E;
+text-align: center;
+font-family: Inter;
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 1px;
+}
+
+.buy-btn-1:hover {
+border: 1px solid #BB945F;
+background: #BB945F;
+}
+.buy-btn-2:hover {
+    border: 1px solid #BB945F;
+    background: #BB945F;
+    }
+    .buy-btn-3:hover {
+        border: 1px solid #BB945F;
+        background: #BB945F;
+        }
+
+.buy-btn-4 {
+border-radius: 2px;
+border: 1px solid #BB945F;
+color: #BB945F;
+}
+
+.buy-btn-1 {
+    top: 2285px;
+    left: 40px;
+}
+
+.buy-btn-2 {
+    top: 2285px;
+    left: 850px;
+}
+
+.buy-btn-3 {
+    top: 2880px;
+    left: 40px;
+}
+
+.buy-btn-4 {
+    top: 2880px;
+    left: 850px;
+}
+
+.book-cover-1, .book-cover-2, .book-cover-3, .book-cover-4 {
+position: absolute;
+}
+
+.book-cover-1 {
+    top: 2035px;
+    left: 410px;
+}
+
+.book-cover-2 {
+    top: 2035px;
+    left: 1220px;
+}
+
+.book-cover-3 {
+    top: 2625px;
+    left: 410px;
+}
+
+.book-cover-4 {
+    top: 2625px;
+    left: 1220px;
+}
