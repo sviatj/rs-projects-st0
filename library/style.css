@@ -130,11 +130,10 @@ background: #0C0C0E;
 .h3-text-box {
 margin: 35px 40px;
 width: 520px;
-flex-shrink: 0;
 }
 
 .bg-picture {
-width: 1440px;
+width: 100%;
 height: 600px;
 background-size: cover;
 background-repeat: no-repeat;
@@ -220,64 +219,82 @@ font-weight: 700;
 /* favorites / Radio button section */
 
 .radio-btn-container {
-display: flex;
-flex-direction: row;
-
-font-family: Inter;
-font-size: 20px;
-
-margin-top: 30px;
-padding-left: 20px;
-}
-
-input[type="radio"] {
--webkit-appearance: none;
-appearance: none;
-}
-
-input[type="radio"] {
-margin: 0;
-width: 17px;
-height: 17px;
-border: 2px solid black;
-border-radius: 50%;
 
 
-display: grid;
-place-content: center;
-}
+    display: flex;
+    flex-direction: row;
 
-input[type="radio"]::before {
-content: "";
-width: 6px;
-height: 6px;
-border-radius: 50%;
-transform: scale(0);
-box-shadow: inset 6px 6px;
+    height: 25px;
 
-transition: 120ms transform ease-in-out;
-}
+    width: 400px;
 
-input[type="radio"]:checked::before {
-transform: scale(1);
-}
+    font-family: Inter;
+    font-size: 20px;
+    
+    margin-top: 10px;
+    padding-left: 10px;
+    }
+    
+    input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    }
+    
+    input[type="radio"] {
+    margin: 0;
+    width: 17px;
+    height: 17px;
+    border: 2px solid black;
+    border-radius: 50%;
+    
+    display: grid;
+    place-content: center;
+    }
+    
+    input[type="radio"]::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transform: scale(0);
+    box-shadow: inset 6px 6px;
+    
+    transition: 120ms transform ease-in-out;
+    }
+    
+    input[type="radio"]:checked::before {
+    transform: scale(1);
+    }
+    
+    label {
 
-label {
-padding: 0 90px 0 20px;
-margin-top: -4px;
-}
-/*End of radio button section*/ 
+        display: flex;
+        flex-direction: row;
 
+        align-items: center;
+
+    padding: 0px 90px 0 10px;
+
+    gap: 10px;
+    }
+
+    .radio-text {
+        padding-left: 6px;
+    }
+    /*End of radio button section*/ 
+    
 .winter-favorites {
 display: flex;
 flex-wrap: wrap;
+padding-bottom: 40px;
 }
 
 .item-1, .item-2, .item-3, .item-4 {   
+position: relative;
 width: 550px;
 height: 555px;
 border: solid 1px #0C0C0E;
-margin-top: 36px;    
+margin-top: 39px;    
 }
 
 .item-1, .item-3 {
@@ -299,8 +316,16 @@ text-transform: capitalize;
 margin: 15px 0 10px 20px;
 }
 
-.book-info, .book-title {
+.tag-title-h4:before {
+margin-top: 40px;
+width: 60px;
+content: '';
+border-top: 1px solid #BB945F;
 
+position: absolute;
+}
+
+.book-info, .book-title {
 font-family: Inter;
 font-size: 15px;
 font-weight: 700;
@@ -334,6 +359,8 @@ padding: 0 0px 0px 20px;
 
 .buy-btn-1, .buy-btn-2, .buy-btn-3, .buy-btn-4 {
 position: absolute;
+bottom: 15px;
+left: 20px;
 border-radius: 2px;
 border: 1px solid #0C0C0E;
 width: 75px;
@@ -368,46 +395,88 @@ border: 1px solid #BB945F;
 color: #BB945F;
 }
 
-.buy-btn-1 {
-    top: 2285px;
-    left: 40px;
-}
-
-.buy-btn-2 {
-    top: 2285px;
-    left: 850px;
-}
-
-.buy-btn-3 {
-    top: 2880px;
-    left: 40px;
-}
-
-.buy-btn-4 {
-    top: 2880px;
-    left: 850px;
-}
-
 .book-cover-1, .book-cover-2, .book-cover-3, .book-cover-4 {
 position: absolute;
+left: 390px;
+bottom: -5px;
 }
 
-.book-cover-1 {
-    top: 2035px;
-    left: 410px;
+.coffee-shop-description {
+padding: 0px 20px;
+padding-top: 30px;
+text-align: center;
+font-family: Inter;
+font-size: 20px;
+line-height: 40px;
+letter-spacing: 2px;
 }
 
-.book-cover-2 {
-    top: 2035px;
-    left: 1220px;
+/*Menu section*/
+
+.menu-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0px 0 0px;;
+    gap: 400px;
 }
 
-.book-cover-3 {
-    top: 2625px;
-    left: 410px;
+.menu-left, .menu-right {
+    list-style: none;
 }
 
-.book-cover-4 {
-    top: 2625px;
-    left: 1220px;
+.column-title {
+color: #BB945F;
+font-family: Forum;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px;
+letter-spacing: 2px;
+text-transform: capitalize;
 }
+
+.left-menu-item, .right-menu-item {
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 40px;
+letter-spacing: 2px;
+text-transform: capitalize;
+}
+
+.left-menu-item, .right-menu-item  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    gap: 220px;
+}
+
+.left-menu-item::before {
+position: absolute;
+left: 300px;
+align-items: center;
+content: '';
+width: 100px;
+height: 1px;
+background: #BB945F;
+}
+
+.right-menu-item::before {
+    position: absolute;
+    left: 1200px;
+    align-items: center;
+    content: '';
+    width: 100px;
+    height: 1px;
+    background: #BB945F;
+    }
+ 
+    .menu-right {
+        text-align: right;
+    }
+    
+    .right-menu-item {
+        text-align: right;
+    }
