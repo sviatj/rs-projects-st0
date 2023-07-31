@@ -852,3 +852,11 @@ font-style: normal;
 font-weight: 400;
 line-height: 20px;
 }
+
+.address-link:hover {
+    text-decoration: underline;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
