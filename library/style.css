@@ -75,6 +75,8 @@ font-weight: 400;
 .nav-link:hover {
 text-decoration: underline;
 color: #FFF;
+
+transition: 2s;
 }
 
 h1 {
@@ -187,6 +189,10 @@ display: flex;
 .picture-column {
 flex: 33.33%;
 padding: 15px;
+}
+
+.hidden-image {
+    display: none;
 }
 
 .pagination-container {
@@ -359,6 +365,8 @@ border: 1px solid #0C0C0E;
 width: 75px;
 height: 30px;
 
+cursor: pointer;
+
 background-color: #FFF;
 
 color: #0C0C0E;
@@ -372,22 +380,26 @@ letter-spacing: 1px;
 .buy-btn-1:hover {
 border: 1px solid #BB945F;
 background: #BB945F;
+transition: 0.5s;
 }
 
 .buy-btn-2:hover {
 border: 1px solid #BB945F;
 background: #BB945F;
+transition: 0.5s;
 }
 
 .buy-btn-3:hover {
 border: 1px solid #BB945F;
 background: #BB945F;
+transition: 0.5s;
 }
 
 .buy-btn-4 {
 border-radius: 2px;
 border: 1px solid #BB945F;
 color: #BB945F;
+transition: 0.5s;
 }
 
 .book-cover-1,.book-cover-2,.book-cover-3,.book-cover-4 {
@@ -638,6 +650,8 @@ letter-spacing: 1px;
 border-radius: 2px;
 border: 1px solid #BB945F;
 background: #BB945F;
+
+transition: 0.5s;
 }
 
 
@@ -715,12 +729,16 @@ margin-right: 15px;
 border-radius: 2px;
 border: 1px solid #BB945F;
 background: #BB945F;
+
+transition: 0.5s;
 }
 
 .login-btn:hover {
 border-radius: 2px;
 border: 1px solid #BB945F;
 background: #BB945F;
+
+transition: 0.5s;
 }
 
 /*footer-section*/
@@ -852,8 +870,10 @@ line-height: 20px;
 
 .address-link:hover {
     text-decoration: underline;
+    transition: 0.5s;
 }
 
 .link:hover {
     text-decoration: underline;
+    transition: 0.5s;
 }
