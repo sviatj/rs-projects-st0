@@ -769,6 +769,8 @@ line-height: 20px;
 
 .icons-footer {
     display: flex;
+    list-style: none;
+    margin-left: -40px;
     flex-direction: row;
     padding-top: 5px;
 }
