@@ -12,13 +12,11 @@
 <body>
     <div class="container">
     <header class="header">
-        <div class="h1-container">
         <div class="h1-box">
         <h1>Brooklyn Public Library</h1>
         </div>
-        </div>
-        <div class="nav-box">
-            <div class="nav-list-container">
+        <div class="nav-list-container">
+        <div class="nav-list-box">
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
@@ -28,7 +26,8 @@
                 <li class="nav-item"><a href="#library-card" class="nav-link">Library Card</a></li>
             </ul>
         </nav>
-        <div class="profile-icon"><a href="#"><span class="header-profile-icon"></span></a></div>
+        </div>
+        <div class="profile-icon"><a href="#"></a>
         </div>
         </div>
     </header>
@@ -48,19 +47,25 @@
             <p class="library-description">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
             <div class="pictures-row">
                 <div class="picture-column">
-                    <img src="assets/slider-img/image-1.png" alt="girl" style="width:100%">
+                    <img src="assets/slider-img/image-1.png" alt="girl" class="pictire-column-img" id="first-slider-img">
                 </div>
                 <div class="picture-column">
-                    <img src="assets/slider-img/image-2.png" alt="statues" style="width:100%">
+                    <img src="assets/slider-img/image-2.png" alt="statues" class="pictire-column-img">
                 </div>
                 <div class="picture-column">
-                    <img src="assets/slider-img/image-3.png" alt="library" style="width:100%">
+                    <img src="assets/slider-img/image-3.png" alt="library" class="pictire-column-img">
                 </div>
-                <img src="assets/slider-img/image-4.png" alt="library-1" style="width:100%" class="hidden-image">
-                <img src="assets/slider-img/image-5.png" alt="library-1" style="width:100%" class="hidden-image">
+                <div class="picture-column">
+                <img src="assets/slider-img/image-4.png" alt="library-1" class="pictire-column-img">
+                </div>
+                <div class="picture-column">
+                <img src="assets/slider-img/image-5.png" alt="library-1" class="pictire-column-img">
+                </div>
             </div>
             <div class="pagination-container">
                 <a class="pagination" href="#about"><span class="circle" id="circle-1"></span></a>
+                <a class="pagination" href="#about"><span class="circle"></span></a>
+                <a class="pagination" href="#about"><span class="circle"></span></a>
                 <a class="pagination" href="#about"><span class="circle"></span></a>
                 <a class="pagination" href="#about"><span class="circle"></span></a>
             </div>
@@ -220,7 +225,7 @@
             <p class="staff-contact-item">Library Director: <a href="mailto:AmandaHirst@gmail.com" class="mail-link">Amanda Hirst</a></p>
             </div>
             <div class="map-container">
-            <img src="assets/map.png" width="719" height="440" alt="map" class="map">
+            <img src="assets/map.png" alt="map" class="map">
             </div>
         </div>
         </section>
