@@ -10,8 +10,8 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    
-    background-color: #8E8E8E;
+
+    background-color: #8f8989;
 
 }
 
@@ -217,6 +217,10 @@ padding: 15px;
     background: #0C0C0E;
     }
 
+.slider-btn  {
+    display: none;
+}
+
 #circle-1 {
 background: #BB945F;
 }
@@ -299,18 +303,23 @@ margin-left: 5px;
 .winter-favorites {
 display: flex;
 flex-wrap: wrap;
-align-items: center;
 padding-bottom: 40px;
-gap: 0px 240px;
+gap: 10px max(20px, calc(100% - 2 * 610px));
 }
+
 
 .book-item {
 position: relative;
-min-width: 550px;
+width: 550px;
 height: 555px;
 border: solid 1px #0C0C0E;
 margin-top: 40px;
+margin-right: 20px;
 margin-left: 20px;
+}
+
+.book-item:nth-child(2), .book-item:nth-child(4) {
+    margin-right: 30px;
 }
 
 .tag-title-h4 {
@@ -412,20 +421,17 @@ transition: 0.5s;
 }
 
 .book_img {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    width: 200px;
-height: 300px;
+    max-width: 200px;
+    height: 300px;
     object-fit: cover;
+
+    overflow: clip;
 }
 
 .book-img-container {
 position: absolute;
+left: 380px;
 top: 255px;
-left: 390px;
-
-flex-shrink: 0;
 }
 
 .coffee-shop-description {
@@ -926,21 +932,20 @@ line-height: 20px;
     justify-content: space-between;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1300px) {
     .winter-favorites{
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        margin: auto;
+        margin: 0 auto;
+    }
+
+    .map-container {
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 1024px) {
-.winter-favorites{
-    display: flex;
-    justify-content: center;
-    max-width: 1000px;
-    margin: auto;
-}
 
 .picture-column {
     display: flex;
@@ -951,6 +956,31 @@ line-height: 20px;
     display: none;
     width: 450px;
     height: 560px;
+}
+
+.slider-btn {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 25px;
+    padding: 50px;
+}
+    .btn-prev {
+    text-align: left;
+    left: 0;
+    align-self: center;
+    }
+    .btn-next {
+    text-align: right;
+    right: 0;
+    align-self: center;
+    }
+
+.btn-icon {
+    width: 24px;
+    height: 24px;
 }
 
 .pagination:nth-child(4) {
@@ -991,20 +1021,21 @@ visibility: hidden;
         font-weight: 400;
         line-height: 40px;
         }
+    .menu-container {
+        flex-wrap: wrap;
+    }
+    .menu-right-container {
+        display: block;
+    }
 }
 
-.map-container  {
+
+.radio-btn-container {
     display: none;
 }
 
 .header {
     display: none;
-}
-
-@media (max-width: 650px) {
-    .book-img-container {
-        left: 370px;
-    }
 }
 
 @media (max-width: 768px) {
