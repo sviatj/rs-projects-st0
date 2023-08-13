@@ -947,6 +947,11 @@ line-height: 20px;
 
 @media (max-width: 1024px) {
 
+    .header.full .menu-header {
+        transform: translateX(-332px);
+        transition: 0.5s;
+    }
+
     .burger_btn {
         z-index: 2;
         order: 2;
@@ -978,13 +983,8 @@ line-height: 20px;
    }
 
     .burger_btn span:nth-child(3) {
-        transform: translateY(10px);
+    transform: translateY(10px);
     }
-
-       .header.full .menu {
-        transform: translateX(-100%);
-        visibility: visible;
-       }
 
        .header.full .burger_btn span:nth-child(1) {
         transform: translateY(0) rotate(-45deg);
@@ -1052,7 +1052,7 @@ margin-right: 38px;
 z-index: 1;
 }
 .menu-header {
-    position: absolute;
+    position: fixed;
     right: -332px;
     top: 0;
     width: 332px;
@@ -1072,11 +1072,6 @@ z-index: 1;
     display: block;
     padding: 15px 0;
     line-height: 50px;
-}
-
-.header.full .menu-header {
-    transform: translateX(-100%);
-    transition: 0.5s;
 }
 }
 
