@@ -452,9 +452,6 @@ padding-top: 20px;
 gap: 20%;
 }
 
-.menu-right-container, .menu-left-container {
-
-}
 
 .menu-right {
 list-style: none;
@@ -970,8 +967,7 @@ line-height: 20px;
         width: 45px;
         height: 2px;
         background-color: #FFF;
-        transition: background-color .5s, opacity .2s, transform .5s;
-        will-change: transform;
+        transition: transform .4s;
     }
 
     .burger_btn:hover span {
@@ -993,7 +989,7 @@ line-height: 20px;
        }
 
        .header.full .burger_btn span:nth-child(1) {
-        transform: translateY(0) rotate(45deg);
+        transform: translateY(0) rotate(-45deg);
        }
     
        .header.full .burger_btn span:nth-child(2) {
@@ -1001,7 +997,7 @@ line-height: 20px;
         }
     
         .header.full .burger_btn span:nth-child(3) {
-        transform: translateY(0) rotate(-45deg);
+        transform: translateY(0) rotate(45deg);
         }
 
 .picture-column {
