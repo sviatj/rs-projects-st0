@@ -446,21 +446,23 @@ letter-spacing: 2px;
 .menu-container {
 display: flex;
 justify-content: space-between;
+flex-wrap: wrap;
 padding-bottom: 40px;
 padding-top: 20px;
+gap: 20%;
 }
 
 .menu-right-container, .menu-left-container {
-flex-wrap: wrap;
+
 }
 
-
-.menu-left, .menu-right {
+.menu-right {
 list-style: none;
-margin: 0 auto;
+margin: auto;
 }
 
 .menu-left {
+list-style: none;
 padding-left: 20px;
 }
 
@@ -490,7 +492,6 @@ text-transform: capitalize;
 }
 
 .left-menu-item,.right-menu-item {
-max-width: 500px;
 display: flex;
 justify-content: space-between;
 padding-top: 40px;
@@ -1121,9 +1122,6 @@ z-index: 1;
     .menu-container {
         flex-wrap: wrap;
     }
-    .menu-right-container {
-        display: block;
-    }
 }
 
 @media (max-width: 767px) {
@@ -1135,6 +1133,11 @@ z-index: 1;
     margin: 15px;
     gap: 30px;
 }
+
+.menu-right-container {
+    margin-left: auto;
+}
+
 }
 @media (max-width: 768px) {
     .picture-column {
