@@ -1,19 +1,17 @@
 
-document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("burger_btn").addEventListener("click", function(e) 
-    {
-      e.isClick = true
-      document.querySelector(".header").classList.toggle("full")
-    })
-})
+const body = document.body;
+const header = document.querySelector('.header');
+const burger = document.querySelector('.burger_btn');
 
-document.getElementById("menu-header").addEventListener("click", e => {
-    e._isClickWithInMenu = true;
+
+burger.addEventListener("click", function(e) 
+{   e.isClicked = true
+    header.classList.toggle("full")
+})
+burger.addEventListener("click", e => {
+    e.MenuIsClicked = true;
 });
-document.getElementById("burger_btn").addEventListener("click", e => {
-    e._isClickWithInMenu = true;
-});
-document.body.addEventListener('click', e => {
-    if (e._isClickWithInMenu) return;
-    document.querySelector(".header").classList.remove("full")
+body.addEventListener('click', e => {
+    if (e.MenuIsClicked) return;
+    header.classList.remove("full")
 });

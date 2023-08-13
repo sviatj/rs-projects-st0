@@ -983,32 +983,26 @@ line-height: 20px;
     transform: translateY(-10px);
    }
 
-    .burger_btn span:nth-child(2) {
-
-    }
-
     .burger_btn span:nth-child(3) {
         transform: translateY(10px);
     }
 
-    /*cross-btn*/
+       .header.full .menu {
+        transform: translateX(-100%);
+        visibility: visible;
+       }
 
        .header.full .burger_btn span:nth-child(1) {
         transform: translateY(0) rotate(45deg);
        }
     
        .header.full .burger_btn span:nth-child(2) {
-        opacity: 0;
+        display: none;
         }
     
         .header.full .burger_btn span:nth-child(3) {
         transform: translateY(0) rotate(-45deg);
         }
-
-    .header.full .menu {
-        transform: translateX(-100%);
-        visibility: visible;
-    }
 
 .picture-column {
     display: flex;
