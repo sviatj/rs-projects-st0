@@ -1,19 +1,19 @@
 
 document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("burger").addEventListener("click", function(event) 
+    document.getElementById("burger_btn").addEventListener("click", function(e) 
     {
-      event.isClick = true
-      document.querySelector(".header").classList.toggle("open")
+      e.isClick = true
+      document.querySelector(".header").classList.toggle("full")
     })
 })
 
-document.getElementById("menu").addEventListener('click', event => {
-    event._isClickWithInMenu = true;
+document.getElementById("menu-header").addEventListener("click", e => {
+    e._isClickWithInMenu = true;
 });
-document.getElementById("burger").addEventListener('click', event => {
-    event._isClickWithInMenu = true;
+document.getElementById("burger_btn").addEventListener("click", e => {
+    e._isClickWithInMenu = true;
 });
-document.body.addEventListener('click', event => {
-    if (event._isClickWithInMenu) return;
-    document.querySelector(".header").classList.remove("open")
+document.body.addEventListener('click', e => {
+    if (e._isClickWithInMenu) return;
+    document.querySelector(".header").classList.remove("full")
 });

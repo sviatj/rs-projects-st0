@@ -993,19 +993,19 @@ line-height: 20px;
 
     /*cross-btn*/
 
-       .header.open .burger_btn span:nth-child(1) {
+       .header.full .burger_btn span:nth-child(1) {
         transform: translateY(0) rotate(45deg);
        }
     
-       .header.open .burger_btn span:nth-child(2) {
+       .header.full .burger_btn span:nth-child(2) {
         opacity: 0;
         }
     
-        .header.open .burger_btn span:nth-child(3) {
+        .header.full .burger_btn span:nth-child(3) {
         transform: translateY(0) rotate(-45deg);
         }
 
-    .header.open .menu {
+    .header.full .menu {
         transform: translateX(-100%);
         visibility: visible;
     }
@@ -1086,7 +1086,7 @@ z-index: 1;
     line-height: 50px;
 }
 
-.header.open .menu-header {
+.header.full .menu-header {
     transform: translateX(-100%);
     transition: 0.5s;
 }
@@ -1147,8 +1147,12 @@ z-index: 1;
         padding-top: 25px;
     }
 
+    .coffee-shop-description {
+        margin-bottom: 5px;
+    }
+
     .menu-right-container {
-        padding-top: 40px;
+        margin-top: 25px;
         margin-left: 245px;
     }
 
@@ -1174,7 +1178,7 @@ z-index: 1;
     }
 
     .bottom-block::before {
-        margin-top: 15px;
+        margin-top: 10px;
     }
 
     .rs-school-link {
