@@ -1,5 +1,3 @@
-const body = document.body;
-const header = document.querySelector('.header');
 
 document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("burger").addEventListener("click", function(event) 
@@ -17,6 +15,5 @@ document.getElementById("burger").addEventListener('click', event => {
 });
 document.body.addEventListener('click', event => {
     if (event._isClickWithInMenu) return;
-    // Действие при клике
     document.querySelector(".header").classList.remove("open")
 });
