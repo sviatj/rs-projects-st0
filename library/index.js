@@ -30,10 +30,12 @@ const burger = document.querySelector('.burger_btn');
 
 
 burger.onclick = function(openBurger) { 
-    openBurger.IsClicked = true;
+    if (openBurger.IsClicked = true)
     header.classList.toggle("full")
+    return;
+   
 }
 body.onclick = function(openBurger)  {
-    if (openBurger.IsClicked) return;
-    header.classList.remove("full")
+    if (openBurger.IsClicked)  return;
+    header.classList.remove("full");
 };
