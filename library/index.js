@@ -29,6 +29,7 @@ const header = document.querySelector('.header');
 const burger = document.querySelector('.burger_btn');
 
 
+
 burger.onclick = function(openBurger) { 
     if (openBurger.IsClicked = true)
     header.classList.toggle("full")
@@ -39,3 +40,21 @@ body.onclick = function(openBurger)  {
     if (openBurger.IsClicked)  return;
     header.classList.remove("full");
 };
+
+
+/*
+
+burger.addEventListener('click', () => {
+header.classList.add('full');
+return;
+})
+
+body.addEventListener('click', (click) => {
+    if (!header.contains(click.target)) {
+        header.classList.remove('full')
+    }
+})
+
+*/
+
+
