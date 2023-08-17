@@ -24,11 +24,30 @@
 оценка - 50 баллов
 */
 
+
+/*
+const result = openBurger.IsClicked ? true : 
+*/
+
 const body = document.body;
 const header = document.querySelector('.header');
 const burger = document.querySelector('.burger_btn');
+const cross = document.querySelector('.header.full .burger_btn');
+
+burger.addEventListener('click', () => {
+header.classList.toggle('full');
+burger.classList.toggle('full')
+})
+
+body.addEventListener('click', (click) => {
+    if (!header.contains(click.target) || (!burger.contains(click.target))) {
+        header.classList.remove('full');
+        burger.classList.remove('full')
+    }
+})
 
 
+/*
 
 burger.onclick = function(openBurger) { 
     if (openBurger.IsClicked = true)
@@ -40,21 +59,4 @@ body.onclick = function(openBurger)  {
     if (openBurger.IsClicked)  return;
     header.classList.remove("full");
 };
-
-
-/*
-
-burger.addEventListener('click', () => {
-header.classList.add('full');
-return;
-})
-
-body.addEventListener('click', (click) => {
-    if (!header.contains(click.target)) {
-        header.classList.remove('full')
-    }
-})
-
 */
-
-
