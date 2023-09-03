@@ -45,43 +45,54 @@
         <section class="section" id="about">
             <h2>About</h2>
             <p class="library-description">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside</p>
-            <div class="pictures-row">
-                <div class="picture-column">
-                    <img src="assets/slider-img/image-1.png" alt="girl" class="pictire-column-img" id="first-slider-img">
-                </div>
-                <div class="picture-column">
-                    <img src="assets/slider-img/image-2.png" alt="statues" class="pictire-column-img">
-                </div>
-                <div class="picture-column">
-                    <img src="assets/slider-img/image-3.png" alt="library" class="pictire-column-img">
-                </div>
-                <div class="picture-column">
-                <img src="assets/slider-img/image-4.png" alt="library" class="pictire-column-img">
-                </div>
-                <div class="picture-column">
-                <img src="assets/slider-img/image-5.png" alt="library" class="pictire-column-img">
-                </div>
+            <div class="carousel_wrapper">
+
+
                 <button class="slider-btn btn-prev">
                     <img src="assets/icons/Carret_Left.svg" alt="prev" class="btn-icon">
                 </button>
                 <button class="slider-btn btn-next">
                     <img src="assets/icons/Carret_Right.svg" alt="next"class="btn-icon">
                 </button>
+
+
+                <div class="slider_wrapper">
+                    <div class="slider_container">
+                <div class="slide" id="slide1">
+                    <img src="assets/slider-img/image-1.png" alt="">
+                </div>
+                <div class="slide" id="slide2">
+                    <img src="assets/slider-img/image-2.png" alt="">
+                </div>
+                <div class="slide" id="slide3">
+                    <img src="assets/slider-img/image-3.png" alt="">
+                </div>
+                <div class="slide" id="slide4">
+                <img src="assets/slider-img/image-4.png" alt="">
+                </div>
+                <div class="slide" id="slide5">
+                <img src="assets/slider-img/image-5.png" alt="">
+                </div>
+                </div>
+                
+                </div>
+                <div class="pagination-container">
+
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
-            <div class="pagination-container">
-                <a class="pagination" href="#about"><span class="circle" id="circle-1"></span></a>
-                <a class="pagination" href="#about"><span class="circle"></span></a>
-                <a class="pagination" href="#about"><span class="circle"></span></a>
-                <a class="pagination" href="#about"><span class="circle"></span></a>
-                <a class="pagination" href="#about"><span class="circle"></span></a>
-            </div>
+
         </section>
         <section class="section" id="favorites">
             <h2>Favorites</h2>
             <p class="pick-title">Pick favorites of season</p>
             <div class="radio-btn-container">
             <label for="winter" class="label">
-            <input type="radio" id="winter" name="radio" checked>
+            <input type="radio" id="winter" name="radio" class="checked">
             <b>Winter</b></label>
            <label for="spring" class="label">
             <input type="radio" id="spring" name="radio">
@@ -93,7 +104,8 @@
             <input type="radio" id="autumn" name="radio">
             Autumn</label>
             </div>
-            <div class="winter-favorites">
+
+            <div class="favorites_section visible" data-name="winter">
                 <div class="book-item">
                 <div class="tag-title">
                     <p class="tag-title-h4">Staff Picks</p>
@@ -153,6 +165,197 @@
                 </div>
                 </div>
             </div>
+
+
+            <div class="favorites_section" data-name="spring">
+                <div class="book-item">
+                <div class="tag-title">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-info"><span class="book-title">The Body</span> <br> By Stephen King</p>
+                    <button class="buy-btn-1">Buy</button>
+                    <div class="book-cover-container">
+                        <div class="book-cover">
+                            <p class="book-description">Powerful novel that takes you back to a nostalgic time, exploring both the beauty and danger and loss of innocence that is youth.</p>
+                            <div class="book-img-container">
+                            <img src="assets/favorites/fav-1.jpeg" alt="book-cover" width="200" height="300" class="book_img">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <div class="book-item">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-info"><span class="book-title">Carry: A Memoir of Survival on Stolen Land</span> <br>By Toni Jenson</p>
+                    <button class="buy-btn-2">Buy</button>
+                    <div class="book-cover-container">
+                        <div class="book-cover">
+                            <p class="book-description">This memoir about the author's relationship with gun violence feels both expansive and intimate, resulting in a lyrical indictment of the way things are.</p>
+                            <div class="book-img-container">
+                            <img src="assets/favorites/fav-2.jpeg" alt="book-cover" width="200" height="300" class="book_img">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="book-item">
+                <div class="tag-title">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-info"><span class="book-title">Days of Distraction</span> <br> By Alexandra Chang</p>
+                    <button class="buy-btn-3">Buy</button>
+                    <div class="book-cover-container">
+                        <div class="book-cover">
+                            <p class="book-description">A sardonic view of Silicon Valley culture, a meditation on race, and a journal of displacement and belonging, all in one form-defying package of spare prose.</p>
+                            <div class="book-img-container">
+                            <img src="assets/favorites/fav-3.jpeg" alt="book cover" width="200" height="300" class="book_img">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <div class="book-item">
+                <div class="tag-title">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-info"><span class="book-title">Dominicana</span> <br> By Angie Cruz</p>
+                </div>
+                <button disabled class="buy-btn-4">Own</button>
+                <div class="book-cover-container">
+                    <div class="book-cover">
+                        <p class="book-description">A fascinating story of a teenage girl who marries a man twice her age with the promise to bring her to America. Her marriage is an opportunity for her family to eventually immigrate. For fans of Isabel Allende and Julia Alvarez.</p>
+                        <div class="book-img-container">
+                        <img src="assets/favorites/fav-4.jpeg" alt="book cover" width="200" height="300" class="book_img">
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+            <div class="favorites_section" data-name="summer">
+                <div class="book-item">
+                <div class="tag-title">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-info"><span class="book-title">Crude: A Memoir</span> <br> By Pablo Fajardo & ​​Sophie Tardy-Joubert</p>
+                    <button class="buy-btn-1">Buy</button>
+                    <div class="book-cover-container">
+                        <div class="book-cover">
+                            <p class="book-description">Drawing and color by Damien Roudeau | This book illustrates the struggles of a group of indigenous Ecuadoreans as they try to sue the ChevronTexaco company for damage their oil fields did to the Amazon and her people.</p>
+                            <div class="book-img-container">
+                            <img src="assets/favorites/fav-5.jpeg" alt="book-cover" width="200" height="300" class="book_img">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <div class="book-item">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-info"><span class="book-title">Let My People Go Surfing</span> <br> By Yvon Chouinard</p>
+                    <button class="buy-btn-2">Buy</button>
+                    <div class="book-cover-container">
+                        <div class="book-cover">
+                            <p class="book-description">Chouinard—climber, businessman, environmentalist—shares tales of courage and persistence from his experience of founding and leading Patagonia, Inc. Full title: Let My People Go Surfing: The Education of a Reluctant Businessman, Including 10 More Years of Business Unusual.</p>
+                            <div class="book-img-container">
+                            <img src="assets/favorites/fav-6.jpeg" alt="book-cover" width="200" height="300" class="book_img">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="book-item">
+                <div class="tag-title">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-info"><span class="book-title">The Octopus Museum: Poems</span> <br> By Brenda Shaughnessy</p>
+                    <button class="buy-btn-3">Buy</button>
+                    <div class="book-cover-container">
+                        <div class="book-cover">
+                            <p class="book-description">This collection of bold and scathingly beautiful feminist poems imagines what comes after our current age of environmental destruction, racism, sexism, and divisive politics.</p>
+                            <div class="book-img-container">
+                            <img src="assets/favorites/fav-7.jpeg" alt="book cover" width="200" height="300" class="book_img">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <div class="book-item">
+                <div class="tag-title">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-info"><span class="book-title">Shark Dialogues: A Novel</span> <br> By Kiana Davenport</p>
+                </div>
+                <button disabled class="buy-btn-4">Own</button>
+                <div class="book-cover-container">
+                    <div class="book-cover">
+                        <p class="book-description">An epic saga of seven generations of one family encompasses the tumultuous history of Hawaii as a Hawaiian woman gathers her four granddaughters together in an erotic tale of villains and dreamers, queens and revolutionaries, lepers and healers.</p>
+                        <div class="book-img-container">
+                        <img src="assets/favorites/fav-8.jpeg" alt="book cover" width="200" height="300" class="book_img">
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+            <div class="favorites_section" data-name="autumn">
+                <div class="book-item">
+                <div class="tag-title">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-info"><span class="book-title">Casual Conversation</span> <br> By Renia White</p>
+                    <button class="buy-btn-1">Buy</button>
+                    <div class="book-cover-container">
+                        <div class="book-cover">
+                            <p class="book-description">White's impressive debut collection takes readers through and beyond the concepts of conversation and the casual - both what we say to each other and what we don't, examining the possibilities around how we construct and communicate identity.</p>
+                            <div class="book-img-container">
+                            <img src="assets/favorites/fav-9.jpeg" alt="book-cover" width="200" height="300" class="book_img">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <div class="book-item">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-info"><span class="book-title">The Great Fire</span> <br> By Lou Ureneck</p>
+                    <button class="buy-btn-2">Buy</button>
+                    <div class="book-cover-container">
+                        <div class="book-cover">
+                            <p class="book-description">The harrowing story of an ordinary American and a principled Naval officer who, horrified by the burning of Smyrna, led an extraordinary rescue effort that saved a quarter of a million refugees from the Armenian Genocide.</p>
+                            <div class="book-img-container">
+                            <img src="assets/favorites/fav-10.jpeg" alt="book-cover" width="200" height="300" class="book_img">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="book-item">
+                <div class="tag-title">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-info"><span class="book-title">Rickey: The Life and Legend</span> <br> By Howard Bryant</p>
+                    <button class="buy-btn-3">Buy</button>
+                    <div class="book-cover-container">
+                        <div class="book-cover">
+                            <p class="book-description">With the fall rolling around, one can't help but think of baseball's postseason coming up! And what better way to prepare for it than reading the biography of one of the game's all-time greatest performers, the Man of Steal, Rickey Henderson?</p>
+                            <div class="book-img-container">
+                            <img src="assets/favorites/fav-11.jpeg" alt="book cover" width="200" height="300" class="book_img">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <div class="book-item">
+                <div class="tag-title">
+                    <p class="tag-title-h4">Staff Picks</p>
+                    <p class="book-info"><span class="book-title">Slug: And Other Stories</span> <br> By Megan Milks</p>
+                </div>
+                <button disabled class="buy-btn-4">Own</button>
+                <div class="book-cover-container">
+                    <div class="book-cover">
+                        <p class="book-description">Exes Tegan and Sara find themselves chained together by hairballs of codependency. A father and child experience the shared trauma of giving birth to gods from their wounds.</p>
+                        <div class="book-img-container">
+                        <img src="assets/favorites/fav-12.jpeg" alt="book cover" width="200" height="300" class="book_img">
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+
+
+
         </section>
         <section class="section" id="coffee-shop">
             <h2>Coffee shop</h2>

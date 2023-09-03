@@ -186,30 +186,33 @@ font-weight: 400;
 line-height: 40px
 }
 
-.pictures-row {
-display: flex;
-}
-.pictire-column-img {
-    max-width: 100%;
-}
-.picture-column {
-margin: 0 auto;
-flex: 33.33%;
-padding: 0px 15px;
-}
 
-.picture-column:nth-child(4),  .picture-column:nth-child(5){
-    display: none;
-}
+    .slider_wrapper {
+    width: 1400px;
+    height: 600px;
+    margin-left: 20px;
+    overflow: hidden;
+    }
+
+    .slider_container {
+        display: flex;
+        position: relative;
+        left: 0;
+        gap: 25px;
+        transition: 2s;
+    }
+
+    .slide {
+        width: 100%;
+    }
 
 .pagination-container {
     display: flex;
     justify-content: center;
-    padding-top: 30px;
-    margin-bottom: 55px;
+    margin-bottom: 45px;
     }
     
-    .circle {
+    .dot {
     display: block;
     margin: 5px;
     width: 16px;
@@ -218,20 +221,19 @@ padding: 0px 15px;
     background: #0C0C0E;
     }
 
+    .active {
+        background: #BB945F;
+        transition: 2s;
+        }
+
 .slider-btn  {
     display: none;
 }
 
-#circle-1 {
-background: #BB945F;
+.dot:nth-child(4),.dot:nth-child(5) {
+    display: none;
 }
 
-.pagination:nth-child(4) {
-    display: none;
-}
-.pagination:nth-child(5) {
-    display: none;
-}
 
 .pick-title {
 display: flex;
@@ -297,7 +299,7 @@ gap: 15px;
 
 /*End of radio button section*/
 
-.winter-favorites {
+.favorites_section {
 display: flex;
 flex-wrap: wrap;
 padding-bottom: 40px;
@@ -927,7 +929,7 @@ line-height: 20px;
 }
 
 @media (max-width: 1300px) {
-    .winter-favorites{
+    .favorites_section{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -989,16 +991,6 @@ line-height: 20px;
     }
 
 
-.picture-column {
-    display: flex;
-    justify-content: center;
-}
-
-.picture-column:nth-child(n+2):nth-child(-n+5) {
-    display: none;
-    width: 450px;
-    height: 560px;
-}
 
 .slider-btn {
     position: absolute;
@@ -1013,13 +1005,11 @@ line-height: 20px;
     text-align: left;
     left: 0;
     align-self: center;
-    padding-top: 15%;
     }
     .btn-next {
     text-align: right;
     right: 0;
     align-self: center;
-    padding-top: 15%;
     }
 
 .btn-icon {
@@ -1027,12 +1017,10 @@ line-height: 20px;
     height: 24px;
 }
 
-.pagination:nth-child(4) {
+.pagination:nth-child(4), .pagination:nth-child(5) {
     display: block;
 }
-.pagination:nth-child(5) {
-    display: block;
-}
+
 
 .nav-list-container {
     display: flex;
@@ -1092,10 +1080,52 @@ z-index: 1;
         font-style: normal;
         font-weight: 400;
         line-height: 40px;
+        padding-bottom: 20px;
         }
     .menu-container {
         flex-wrap: wrap;
     }
+
+
+    .slider_container {
+        overflow:visible;
+    }
+    .slider_wrapper {
+        display: flex;
+        width: 450px;
+        left: 0;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .slider-btn {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        margin: 10px;
+        padding: 10px;
+    }
+        .btn-prev {
+        text-align: left;
+        left: 0;
+        align-self: center;
+        top: 15%;
+        }
+
+        .btn-next {
+        text-align: right;
+        right: 0;
+        align-self: center;
+        top: 15%;
+        }
+
+        
+.dot:nth-child(4), .dot:nth-child(5)  {
+    display: block;
+}
+
 }
 
 @media (max-width: 767px) {
@@ -1114,12 +1144,6 @@ z-index: 1;
 
 }
 @media (max-width: 768px) {
-    .picture-column {
-        padding-top: 15px;
-    }
-    .pagination-container {
-        padding-top: 25px;
-    }
 
     .coffee-shop-description {
         margin-bottom: 5px;
