@@ -160,7 +160,7 @@ letter-spacing: 0.4px;
 text-transform: uppercase;
 }
 
-.drop-menu-register-container {
+.drop-menu-register-container, .drop-menu-login-container {
 display: block;
 text-align: center;
 align-items: center;
@@ -176,7 +176,7 @@ font-family: Inter;
 font-size: 15px;
 font-style: normal;
 font-weight: 400;
-line-height: 20px; /* 133.333% */
+line-height: 20px;
 letter-spacing: 0.3px;
 }
 
@@ -186,7 +186,7 @@ letter-spacing: 0.3px;
     transition: 1s;
 }
 
-.form-close {
+.form-close-1,  .form-close-2{
     width: 15px;
     height: 15px;
     display: inline-block;
@@ -213,7 +213,7 @@ font-weight: 400;
 line-height: normal;
 }
 
-.login-form-link {
+.login-form-link, .register-form-link {
 padding-left: 10px;
 text-align: right;
 font-family: Inter;
@@ -228,6 +228,17 @@ text-decoration-line: underline;
 .signup-form-btn {
     margin-top: 0;
     margin-bottom: 10px;
+}
+
+.drop-menu-login-container {
+    width: 250px;
+    height: 262px;
+    right: -250px;
+}
+
+.drop-menu-login-container.open {
+    transform: translateX(-325%);
+    transition: 1s;
 }
 /* welcome section*/
 

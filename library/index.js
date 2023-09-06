@@ -137,15 +137,35 @@ body.addEventListener('click', (click) => {
 //Register
 
 const registerBtn = document.querySelector('.modal-title-3')
-const closeFormBtn = document.querySelector('.form-close')
+const closeFormBtnLog = document.querySelector('.form-close-1')
+const closeFormBtnReg = document.querySelector('.form-close-2')
 const dropMenu = document.querySelector('.drop-menu-register-container')
+const loginBtn = document.querySelector('.modal-title-2')
+const droploginMenu = document.querySelector('.drop-menu-login-container')
+const modalLinkLogin = document.querySelector('.login-form-link')
+const modalLinkReg = document.querySelector('.register-form-link')
 
-
+loginBtn.addEventListener('click', () => {
+    droploginMenu.classList.toggle('open');
+})
+closeFormBtnLog.addEventListener('click', () => {
+    droploginMenu.classList.remove('open')
+})
 
 registerBtn.addEventListener('click', () => {
     dropMenu.classList.toggle('open');
 })
 
-closeFormBtn.addEventListener('click', () => {
-    dropMenu.classList.remove('open');
+closeFormBtnReg.addEventListener('click', () => {
+    dropMenu.classList.remove('open')
+})
+
+modalLinkLogin.addEventListener('click', () => {
+    droploginMenu.classList.toggle('open');
+    dropMenu.classList.remove('open')
+})
+
+modalLinkReg.addEventListener('click', () => {
+    dropMenu.classList.toggle('open');
+    droploginMenu.classList.remove('open')
 })
