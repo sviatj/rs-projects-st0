@@ -17,6 +17,7 @@ body.addEventListener('click', (click) => {
 })
 
 
+
 /*
 
 burger.onclick = function(openBurger) { 
@@ -43,46 +44,43 @@ const nextBtn = document.querySelector('.btn-next')
 const prevBtn = document.querySelector('.btn-prev')
 
 let start = 0;
-let dotIndex = 0;
-
+let dotI = 0;
 
 
 const nextImg = () => {
     if (start < 1860) {
         start += 475
-        dotIndex++
+        dotI++
     } else {
         start = 0
-        dotIndex = 0
+        dotI = 0
     }
     sliderCont.style.left = -start + 'px'
-    dotActive(dotIndex)
+    dotActive(dotI)
 }
 
 
 const prevImg = () => {
     if (start > 0) {
         start -= 475
-        dotIndex--
+        dotI--
     } else {
         start = (dots.length - 1) * 475
-        dotIndex = (dots.length - 1)
+        dotI = (dots.length - 1)
     }
     sliderCont.style.left = -start + 'px'
-    dotActive(dotIndex)
+    dotActive(dotI)
 }
-
-///
 
 nextBtn.addEventListener('click', nextImg)
 prevBtn.addEventListener('click', prevImg)
 
-dots.forEach( (dot, i) => {
+dots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
         start = 475 * i
         sliderCont.style.left = -start + 'px'
-        dotIndex = i
-        dotActive(dotIndex)
+        dotI = i
+        dotActive(dotI)
     })
 })
 
@@ -97,14 +95,57 @@ const dotActive = (i) => {
 
 const inputButtons = document.querySelectorAll('.radio-btn-container input')
 const seasonSections = document.querySelectorAll('.favorites_section')
+const startBtn = document.getElementById('winter')
 
 const showSection = e => {
+
     document.querySelector('.visible').classList.remove('visible')
     e.target.classList.add('visible')
 
     seasonSections.forEach(favorites_section => {
-        favorites_section.classList.add('hide')
+        favorites_section.classList.add('hidden')
+
+        if (favorites_section.dataset.name === e.target.dataset.name) {
+            favorites_section.classList.remove('hidden');
+        }
     }) 
 }
 
+
 inputButtons.forEach(input => input.addEventListener('click', showSection))
+
+window.addEventListener('load', function() {
+    startBtn.click();
+})
+
+//User profile no auth
+
+
+const userIcon = document.querySelector('.profile-icon')
+const dropMenuAuth = document.querySelector('.drop-menu-auth')
+
+userIcon.addEventListener('click', () => {
+    dropMenuAuth.classList.toggle('open');
+})
+
+body.addEventListener('click', (click) => {
+    if (!userIcon.contains(click.target)) {
+        dropMenuAuth.classList.remove('open')
+    }
+})
+
+//Register
+
+const registerBtn = document.querySelector('.modal-title-3')
+const closeFormBtn = document.querySelector('.form-close')
+const dropMenu = document.querySelector('.drop-menu-register-container')
+
+
+
+registerBtn.addEventListener('click', () => {
+    dropMenu.classList.toggle('open');
+})
+
+closeFormBtn.addEventListener('click', () => {
+    dropMenu.classList.remove('open');
+})

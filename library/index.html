@@ -28,7 +28,40 @@
                 <li class="nav-item"><a href="#library-card" class="nav-link">Library Card</a></li>
             </ul>
         </nav>
-        <div class="profile-icon"><a href="#"></a></div>
+        <div class="profile-icon">
+            <div class="drop-menu-auth">
+                <div class="modal-title-1">Profile</div>
+                <div class="modal-title-2">Log In</div>
+                <div class="modal-title-3">Register</div>
+            </div>
+        </div>
+        <div class="drop-menu-register">
+            <div class="drop-menu-register-container">
+                <img src="assets/icons/form_close_btn.svg" alt="close" class="form-close">
+                <p class="menu_reg_title">Register</p>
+            <form>
+                <div class="reg_form_title">First Name</div>
+                <label for="name">
+                    <input id="first-name" type="text" pattern="[A-Za-z]" class="register-input">
+                </label>
+                <div class="reg_form_title">Last Name</div>
+                <label for="last-name">
+                    <input id="last-name" type="text" pattern="[A-Za-z]" class="register-input">
+                </label>
+                <div class="rreg_form_title">Emal</div>
+                <label for="email">
+                    <input id="email" type="text" pattern="[A-Za-z]" class="register-input">
+                </label>
+                <div class="reg_form_title">Password</div>
+                    <label for="password">
+                    <input id="password" type="number" class="register-input">
+                </label>
+            </form>
+            <button class="signup-form-btn">Sign Up</button>
+            <div class="login-form-title">Already have an account?<span class="login-form-link">Login</span></div>
+        </div>
+        </div>
+        <div class="drop-menu-login"></div>
         </div>
     </header>
     <main class="main">
@@ -92,16 +125,16 @@
             <p class="pick-title">Pick favorites of season</p>
             <div class="radio-btn-container">
             <label for="winter" class="label">
-            <input type="radio" id="winter" name="radio" class="checked">
-            <b>Winter</b></label>
+            <input type="radio" id="winter" name="radio" data-name="winter" checked>
+            Winter</label>
            <label for="spring" class="label">
-            <input type="radio" id="spring" name="radio">
+            <input type="radio" id="spring" name="radio" data-name="spring">
             Spring</label>
             <label for="summer" class="label">
-            <input type="radio" id="summer" name="radio">
+            <input type="radio" id="summer" name="radio" data-name="summer">
             Summer</label>
             <label for="autumn" class="label">
-            <input type="radio" id="autumn" name="radio">
+            <input type="radio" id="autumn" name="radio" data-name="autumn">
             Autumn</label>
             </div>
 
@@ -154,7 +187,7 @@
                     <p class="tag-title-h4">Staff Picks</p>
                     <p class="book-info"><span class="book-title">The Last Queen</span> <br> By Clive Irving</p>
                 </div>
-                <button disabled class="buy-btn-4">Own</button>
+                <button class="buy-btn-4">Buy</button>
                 <div class="book-cover-container">
                     <div class="book-cover">
                         <p class="book-description">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
@@ -216,7 +249,7 @@
                     <p class="tag-title-h4">Staff Picks</p>
                     <p class="book-info"><span class="book-title">Dominicana</span> <br> By Angie Cruz</p>
                 </div>
-                <button disabled class="buy-btn-4">Own</button>
+                <button class="buy-btn-4">Buy</button>
                 <div class="book-cover-container">
                     <div class="book-cover">
                         <p class="book-description">A fascinating story of a teenage girl who marries a man twice her age with the promise to bring her to America. Her marriage is an opportunity for her family to eventually immigrate. For fans of Isabel Allende and Julia Alvarez.</p>
@@ -340,7 +373,7 @@
                     <p class="tag-title-h4">Staff Picks</p>
                     <p class="book-info"><span class="book-title">Slug: And Other Stories</span> <br> By Megan Milks</p>
                 </div>
-                <button disabled class="buy-btn-4">Own</button>
+                <button class="buy-btn-4">Buy</button>
                 <div class="book-cover-container">
                     <div class="book-cover">
                         <p class="book-description">Exes Tegan and Sara find themselves chained together by hairballs of codependency. A father and child experience the shared trauma of giving birth to gods from their wounds.</p>
