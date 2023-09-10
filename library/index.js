@@ -16,23 +16,6 @@ body.addEventListener('click', (click) => {
     }
 })
 
-
-
-/*
-
-burger.onclick = function(openBurger) { 
-    if (openBurger.IsClicked = true)
-    header.classList.toggle("full")
-    return;
-   
-}
-body.onclick = function(openBurger)  {
-    if (openBurger.IsClicked)  return;
-    header.classList.remove("full");
-};
-*/
-
-
 //About slider//
 
 const sliderWrapper = document.querySelector('.slider_wrapper')
@@ -51,25 +34,18 @@ const nextImg = () => {
     if (start < 1860) {
         start += 475
         dotI++
-    } else {
-        start = 0
-        dotI = 0
-    }
+    } 
     sliderCont.style.left = -start + 'px'
-    dotActive(dotI)
+    dotCurrent(dotI)
 }
-
 
 const prevImg = () => {
     if (start > 0) {
         start -= 475
         dotI--
-    } else {
-        start = (dots.length - 1) * 475
-        dotI = (dots.length - 1)
-    }
+    } 
     sliderCont.style.left = -start + 'px'
-    dotActive(dotI)
+    dotCurrent(dotI)
 }
 
 nextBtn.addEventListener('click', nextImg)
@@ -80,11 +56,11 @@ dots.forEach((dot, i) => {
         start = 475 * i
         sliderCont.style.left = -start + 'px'
         dotI = i
-        dotActive(dotI)
+        dotCurrent(dotI)
     })
 })
 
-const dotActive = (i) => {
+const dotCurrent = (i) => {
     for (let dot of dots) {
         dot.classList.remove('active') 
     }
@@ -126,15 +102,12 @@ const dropMenuAuth = document.querySelector('.drop-menu-auth')
 
 userIcon.addEventListener('click', () => {
     dropMenuAuth.classList.toggle('open');
+    mainCont.classList.toggle('overlay')
 })
 
-body.addEventListener('click', (click) => {
-    if (!userIcon.contains(click.target)) {
-        dropMenuAuth.classList.remove('open')
-    }
-})
 
-//Register
+
+
 
 const registerBtn = document.querySelector('.modal-title-3')
 const closeFormBtnLog = document.querySelector('.form-close-1')
@@ -144,20 +117,78 @@ const loginBtn = document.querySelector('.modal-title-2')
 const droploginMenu = document.querySelector('.drop-menu-login-container')
 const modalLinkLogin = document.querySelector('.login-form-link')
 const modalLinkReg = document.querySelector('.register-form-link')
+const mainCont = document.querySelector('.main-container')
+const findCardBtnSignup = document.querySelector('.sign-up-btn')
+const findCardBtnLogin = document.querySelector('.login-btn')
+const buyBtn = document.querySelectorAll('#buy_btn')
 
-loginBtn.addEventListener('click', () => {
+/*
+
+loginBtn.addEventListener('click', (e) => {
     droploginMenu.classList.toggle('open');
 })
-closeFormBtnLog.addEventListener('click', () => {
+closeFormBtnLog.addEventListener('click', (e) => {
     droploginMenu.classList.remove('open')
 })
 
-registerBtn.addEventListener('click', () => {
+registerBtn.addEventListener('click', (e) => {
     dropMenu.classList.toggle('open');
 })
 
+closeFormBtnReg.addEventListener('click', (e) => {
+    dropMenu.classList.remove('open')
+    droploginMenu.classList.remove('open')
+})
+
+modalLinkLogin.addEventListener('click', (e) => {
+    droploginMenu.classList.toggle('open');
+    dropMenu.classList.remove('open')
+})
+
+modalLinkReg.addEventListener('click', (e) => {
+    dropMenu.classList.toggle('open');
+    droploginMenu.classList.remove('open')
+})
+
+body.addEventListener('click', (click) => {
+    if (!userIcon.contains(click.target)) {
+        dropMenuAuth.classList.remove('open')
+        droploginMenu.classList.remove('open')
+        dropMenu.classList.remove('open')
+    }
+})
+*/
+
+
+
+
+loginBtn.addEventListener('click', event => {
+    event.click = true;
+    droploginMenu.classList.toggle('open');
+    mainCont.classList.toggle('overlay')
+});
+
+registerBtn.addEventListener('click', event => {
+    event.click = true;
+    dropMenu.classList.toggle('open');
+    mainCont.classList.toggle('overlay')
+});
+
+mainCont.addEventListener('click', event => {
+    if (event.click) return;
+    dropMenu.classList.remove('open')
+    droploginMenu.classList.remove('open')
+    dropMenuAuth.classList.remove('open');
+    mainCont.classList.remove('overlay')
+});
+
 closeFormBtnReg.addEventListener('click', () => {
     dropMenu.classList.remove('open')
+    mainCont.classList.remove('overlay')
+})
+closeFormBtnLog.addEventListener('click', () => {
+    droploginMenu.classList.remove('open')
+    mainCont.classList.remove('overlay')
 })
 
 modalLinkLogin.addEventListener('click', () => {
@@ -169,3 +200,11 @@ modalLinkReg.addEventListener('click', () => {
     dropMenu.classList.toggle('open');
     droploginMenu.classList.remove('open')
 })
+
+
+
+///submit login/registration form
+
+const submitLoginForm = document.querySelector('.login-form-btn')
+const submitRegistrationForm = document.querySelector('.signup-form-btn')
+
