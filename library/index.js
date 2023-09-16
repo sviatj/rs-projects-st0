@@ -1,3 +1,12 @@
+/*Self-grading
+Этап 1: Пользователь не зарегистрирован - 44 points
+Этап 2: Пользователь на этапе регистрации - 20 points
+Этап 3: Пользователь на этапе входа в учётную запись после регистрации - 27 points
+Этап 4: Пользователь после входа в учётную запись - 0 points
+
+Т.к. задание выполнено частично, то оставляйте пожалуйста замечания по готовым пунктам, буду рада любой критике/помощи.
+
+*/
 
 const body = document.body;
 const header = document.querySelector('.header');
@@ -26,34 +35,36 @@ const dots = document.querySelectorAll('.dot')
 const nextBtn = document.querySelector('.btn-next')
 const prevBtn = document.querySelector('.btn-prev')
 
+
+
+
 let start = 0;
 let dotI = 0;
 
 
 const nextImg = () => {
     if (start < 1860) {
-        start += 475
+        start = start + 475
         dotI++
     } 
-    sliderCont.style.left = -start + 'px'
+    sliderCont.style.left = -start  + 'px'
     dotCurrent(dotI)
 }
 
 const prevImg = () => {
     if (start > 0) {
-        start -= 475
+        start = start - 475
         dotI--
     } 
     sliderCont.style.left = -start + 'px'
     dotCurrent(dotI)
 }
-
 nextBtn.addEventListener('click', nextImg)
 prevBtn.addEventListener('click', prevImg)
 
 dots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
-        start = 475 * i
+        start = 475 * i 
         sliderCont.style.left = -start + 'px'
         dotI = i
         dotCurrent(dotI)
@@ -61,11 +72,13 @@ dots.forEach((dot, i) => {
 })
 
 const dotCurrent = (i) => {
-    for (let dot of dots) {
-        dot.classList.remove('active') 
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove('active')
     }
     dots[i].classList.add('active')
-}
+    }
+
+
 
 //Favorites slider//
 
@@ -207,4 +220,5 @@ modalLinkReg.addEventListener('click', () => {
 
 const submitLoginForm = document.querySelector('.login-form-btn')
 const submitRegistrationForm = document.querySelector('.signup-form-btn')
+
 
