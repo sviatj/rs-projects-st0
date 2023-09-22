@@ -27,8 +27,8 @@
         width: 361px;
         height: 410px;
         flex-shrink: 0;
-        border-radius: 19px;
         overflow: hidden;
+        border-radius: 19px;
         background: linear-gradient(180deg, #D8C0DC 0%, rgba(99, 204, 185, 0.62) 100%);
     }
 
@@ -38,6 +38,12 @@
     }
     .song_container {
         width: 100%;
+    }
+
+    .info {
+        position: relative;
+        width: 360px;
+        left: 00px;
     }
 
     .img{
@@ -82,12 +88,21 @@ line-height: 10px;
     background: #5A6BA7;
     margin: 0 auto;
     margin-top: 20px;
+}
 
+.current {
+    border-radius: 4px;
+    width: 100px;
+    height: 4px;
+    border-radius: 11px;
+    background: #ffffff;
+    margin-top: 20px;
 }
 
 .timestamp {
     font-family: Montserrat;
     font-size: 12px;
+    padding-top: 5px;
     width: 299px;
     margin: 0 auto;
     display: flex;

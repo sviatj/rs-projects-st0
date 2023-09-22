@@ -1,10 +1,11 @@
-let nextBtn = document.querySelector(".next");
+let nextBtn = document.querySelector(".button_next");
 let playBtn = document.querySelector(".button_play");
-let previous = document.querySelector(".previous");
-let songs_wrapper = document.querySelector(".next");
+let previousBtn = document.querySelector(".button_prev");
 
-let songtitle = document.querySelector('.song-title')
-let coverImg = document.querySelector('.song-title')
+
+let songTitle = document.querySelector(".song-title");
+let songAuthor = document.querySelector(".song_author");
+let coverImg = document.querySelector('.img')
 
 const audio = document.querySelector('audio');
 
@@ -12,27 +13,44 @@ const audio = document.querySelector('audio');
 let isPlaying = false;
 
 let progress_bar = document.querySelector(".progress_bar");
-let song_container= document.querySelector(".song_container");
+let songContainer= document.querySelector(".info");
 
-const songs = ['Ace Hood - Bugatti (Feat. Future & Rick Ross)', 'yoasobi-idol-mp3']
+const songs = ['Ace Hood - Bugatti (Feat. Future & Rick Ross)', 'YOASOBI - アイドル']
+
 
 let songI = 0;
-    
+
+let songName = [
+    {
+    name: "Bugatti (Feat. Future & Rick Ross)",
+    author: 'Ace Hood',
+    },
+
+    {
+    name: "アイドル",
+    author: 'YOASOBI'
+    }
+];
+
 function init(song) {
+    songTitle.textContent = songName[songI].name;
+    songAuthor.textContent = songName[songI].author;
     audio.src = `assets/songs/${song}.mp3`
+    coverImg.src = `assets/covers/${song}.jpeg`
 }
 init(songs[songI]);
+
 
 function play() {
     audio.play()
     isPlaying = true;
-    playBtn.classList.toggle('pause')
+    playBtn.classList.add('pause')
 }
 
 function pause() {
     audio.pause()
     isPlaying = false;
-    playBtn.classList.toggle('pause')
+    playBtn.classList.remove('pause')
 }
 
 playBtn.addEventListener('click', () => {
@@ -42,4 +60,29 @@ playBtn.addEventListener('click', () => {
         pause()
     }
 })
+
+function playNext() {
+    songI++
+ if (songI > songs.length - 1) {
+     songI = 0;
+    }
+
+    init(songs[songI]);
+    play()
+}
+nextBtn.addEventListener('click', playNext)
         
+function playPrevious() {
+    songI--
+    if (songI < 0) {
+        songI = songs.length - 1;
+       }
+
+       init(songs[songI]);
+       play()
+}
+
+previousBtn.addEventListener('click', playPrevious)
+
+///Duration and timestamps
+
