@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    }
+    
+    html {
+    scroll-behavior: smooth;
+    }
+    
+    body {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    
+        background-color: #8f8d8d;
+    }
+    
+   .main_container {
+    position: relative;
+    min-height: 100%;
+    transform: translateY(30%);
+   }
+
+    .player_wrapper {
+        position: relative;
+        margin: 0 auto;
+        width: 361px;
+        height: 410px;
+        flex-shrink: 0;
+        border-radius: 19px;
+        overflow: hidden;
+        background: linear-gradient(180deg, #D8C0DC 0%, rgba(99, 204, 185, 0.62) 100%);
+    }
+
+    .songs_wrapper {
+        display: flex;
+        width: 200%;
+    }
+    .song_container {
+        width: 100%;
+    }
+
+    .img{
+        object-fit: cover;
+        margin: 0 auto;
+        margin-top: 17px;
+        width: 213px;
+        height: 222px;
+        flex-shrink: 0;
+        border-radius: 4px;
+    }
+
+    .img_cover {
+        display: flex;
+        justify-content: center;
+    }
+
+
+.song-title {
+    margin-top: 20px;
+    margin-left: 38px;
+color: #000;
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 10px;
+}
+.song_author {
+    font-family: Montserrat;
+    font-size: 12px;
+    margin-left: 38px;
+    margin-top: 10px;
+    line-height: 10px;
+}
+
+.progress_bar {
+    border-radius: 4px;
+    width: 299px;
+    height: 4px;
+    border-radius: 11px;
+    background: #5A6BA7;
+    margin: 0 auto;
+    margin-top: 20px;
+
+}
+
+.timestamp {
+    font-family: Montserrat;
+    font-size: 12px;
+    width: 299px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.controls_wrapper {
+    margin-top: 15px;
+}
+
+
+.buttons {
+    cursor: pointer;
+    margin: 0 auto;
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .button_prev {
+        width: 35px;
+        height: 35px;
+    }
+
+    .button_play:hover {
+    transform: scale(1.12);
+    }
+
+    .button_prev:hover {
+        transform: scale(1.12);
+        }
+
+        .pause:hover {
+            transform: scale(1.12);
+            }
+            .button_next:hover {
+                transform: scale(1.12);
+                }
+
+
+    .button_play {
+        cursor: pointer;
+
+        border-radius: 1%;
+        margin-left: 18px;
+        border: 0;
+        background: transparent;
+        width: 46px;
+        height: 40px;
+      
+        transition: 110ms all ease;
+        border-color: transparent transparent transparent #3e3c3f;
+      
+        border-style: solid;
+        border-width: 20px 0 20px 35px;
+    }
+
+    .button_play.pause {
+        border-style: double;
+        border-width: 0px 0 0px 30px;
+      }
+
+    .button_next {
+        width: 35px;
+        height: 35px;
+    }
+
+
+
+
+    
+
+    .footer_container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+    }
+    .year, .github, .logo {
+        width: 300px;
+        text-align: center;
+    }
+    .bottom_block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+        font-family: Montserrat;
+        font-size: 14px;
+    }
