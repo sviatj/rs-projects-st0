@@ -8,7 +8,6 @@ let end = document.querySelector(".end");
 let sliderCurrent = document.querySelector(".current_bar");
 
 
-
 let songTitle = document.querySelector(".song-title");
 let songAuthor = document.querySelector(".song_author");
 let coverImg = document.querySelector('.img')
@@ -22,7 +21,6 @@ let isPlaying = false;
 
 let progress_bar = document.querySelector(".progress_bar");
 
-let songContainer= document.querySelector(".info");
 
 const tracks = ['Travis Scott - I KNOW', 'YOASOBI - アイドル']
 
@@ -116,9 +114,6 @@ let currentPrecent = (audio_currentTime / audio_duration) * 100;
 sliderCurrent.style.width = `${currentPrecent}%`;
 }
 
-function restartTimer() {
-    now.textContent = "00:00";
-}
 
 function timer() {
     let minutes = Math.floor(audio.currentTime / 60);
@@ -138,7 +133,8 @@ function goToOnclick(event) {
     let bar_width = progress_bar.clientWidth;
     let bar_onclick = event.offsetX;
 
-    audio.currentTime = (bar_onclick / bar_width) * audio_duration;
+    let result = (bar_onclick / bar_width) * audio_duration;
+    audio.currentTime = result;
 }
 
 

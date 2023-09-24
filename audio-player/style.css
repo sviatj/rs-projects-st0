@@ -108,35 +108,6 @@ line-height: 10px;
     margin-top: 20px;
 }
 
-
-/*
-input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background: rgb(89, 214, 168);
-    cursor: pointer;
-    width: 250px;
-  }
-
-
-  input[type=range].current::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 0.6em;
-    margin-top: -4px;
-    background: #B166B6;
-  }
-  
-  input[type=range].current::-webkit-slider-runnable-track {
-    height: 5px;
-    border: none;
-    border-radius: 2px;
-    background: #546ebe;
-    box-shadow: none;
-  }
-
-*/
 .timestamp {
     font-family: Montserrat;
     font-size: 12px;
@@ -185,7 +156,6 @@ input[type="range"] {
 
     .button_play {
         cursor: pointer;
-
         border-radius: 1%;
         margin-left: 18px;
         border: 0;
@@ -209,11 +179,6 @@ input[type="range"] {
         width: 35px;
         height: 35px;
     }
-
-
-
-
-    
 
     .footer_container {
         position: absolute;
