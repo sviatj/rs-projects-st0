@@ -10,18 +10,27 @@
         box-sizing: border-box;
         padding: 0;
         margin: 0;
-        height: 100%;
+
     
-        background-color: #8f8d8d;
+        background-color: #ecc6f4;
     }
-    
-   .main_container {
-    position: relative;
-    min-height: 100%;
-    transform: translateY(30%);
+
+    .main_container {
+        position: relative;
+        height: 100vh;
+    }
+
+   .bg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
    }
 
     .player_wrapper {
+        z-index: 1;
+        transform: translateY(50%);
         position: relative;
         margin: 0 auto;
         width: 361px;
@@ -81,24 +90,53 @@ line-height: 10px;
 }
 
 .progress_bar {
-    border-radius: 4px;
-    width: 299px;
-    height: 4px;
+    cursor: pointer;
     border-radius: 11px;
-    background: #5A6BA7;
     margin: 0 auto;
-    margin-top: 20px;
+    background-color: #D8C0DC;
+    width: 300px;
 }
 
-.current {
+
+.current_bar {
+    cursor: pointer;
     border-radius: 4px;
-    width: 100px;
-    height: 4px;
+    height: 5px;
     border-radius: 11px;
-    background: #ffffff;
+    background: #797171;
+    background-color: #bf1ddc;
     margin-top: 20px;
 }
 
+
+/*
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgb(89, 214, 168);
+    cursor: pointer;
+    width: 250px;
+  }
+
+
+  input[type=range].current::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 0.6em;
+    margin-top: -4px;
+    background: #B166B6;
+  }
+  
+  input[type=range].current::-webkit-slider-runnable-track {
+    height: 5px;
+    border: none;
+    border-radius: 2px;
+    background: #546ebe;
+    box-shadow: none;
+  }
+
+*/
 .timestamp {
     font-family: Montserrat;
     font-size: 12px;
@@ -179,22 +217,44 @@ line-height: 10px;
 
     .footer_container {
         position: absolute;
+        z-index: 1;
         bottom: 0;
         width: 100%;
         height: 30px;
+        font-size: 20px;
+        background-color: #ed85ff;
     }
     .year, .github, .logo {
         width: 300px;
+        color: antiquewhite;
+
         text-align: center;
     }
+    .github {
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .year {
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .rs-school-link {
+        width: 50px;
+        height: 30px;
+    }
+
     .bottom_block {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
+
     a {
         text-decoration: none;
         color: #000;
+        color: antiquewhite;
         font-family: Montserrat;
-        font-size: 14px;
+        font-size: 20px;
     }

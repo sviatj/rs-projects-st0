@@ -2,10 +2,18 @@ let nextBtn = document.querySelector(".button_next");
 let playBtn = document.querySelector(".button_play");
 let previousBtn = document.querySelector(".button_prev");
 
+let now = document.querySelector(".now");
+let end = document.querySelector(".end");
+
+let sliderCurrent = document.querySelector(".current_bar");
+
+
 
 let songTitle = document.querySelector(".song-title");
 let songAuthor = document.querySelector(".song_author");
 let coverImg = document.querySelector('.img')
+
+let bgImg = document.querySelector('.bg')
 
 const audio = document.querySelector('audio');
 
@@ -13,32 +21,41 @@ const audio = document.querySelector('audio');
 let isPlaying = false;
 
 let progress_bar = document.querySelector(".progress_bar");
+
 let songContainer= document.querySelector(".info");
 
-const songs = ['Ace Hood - Bugatti (Feat. Future & Rick Ross)', 'YOASOBI - アイドル']
+const tracks = ['Travis Scott - I KNOW', 'YOASOBI - アイドル']
 
 
-let songI = 0;
+let trackI = 0;
+let audio_currentTime = audio.currentTime;
 
-let songName = [
+let trackName = [
     {
-    name: "Bugatti (Feat. Future & Rick Ross)",
-    author: 'Ace Hood',
+    name: "I KNOW",
+    author: 'Travis Scott',
+    end: '3:31',
     },
 
     {
     name: "アイドル",
-    author: 'YOASOBI'
+    author: 'YOASOBI',
+    end: '3:33',
     }
 ];
 
-function init(song) {
-    songTitle.textContent = songName[songI].name;
-    songAuthor.textContent = songName[songI].author;
-    audio.src = `assets/songs/${song}.mp3`
-    coverImg.src = `assets/covers/${song}.jpeg`
+function init(track) {
+    bgImg.src = `assets/bg/${track}.gif`
+    
+    songTitle.textContent = trackName[trackI].name;
+    songAuthor.textContent = trackName[trackI].author;
+
+    end.textContent = trackName[trackI].end;
+    audio.src = `assets/songs/${track}.mp3`
+
+    coverImg.src = `assets/covers/${track}.jpeg`
 }
-init(songs[songI]);
+init(tracks[trackI]);
 
 
 function play() {
@@ -62,27 +79,70 @@ playBtn.addEventListener('click', () => {
 })
 
 function playNext() {
-    songI++
- if (songI > songs.length - 1) {
-     songI = 0;
+    trackI++
+ if (trackI > tracks.length - 1) {
+
+    trackI = 0;
     }
 
-    init(songs[songI]);
+    init(tracks[trackI]);
     play()
 }
 nextBtn.addEventListener('click', playNext)
+audio.addEventListener('ended', playNext)
+
         
 function playPrevious() {
-    songI--
-    if (songI < 0) {
-        songI = songs.length - 1;
+    trackI--
+    if (trackI < 0) {
+        trackI = tracks.length - 1;
        }
-
-       init(songs[songI]);
+       
+       init(tracks[trackI]);
        play()
 }
 
 previousBtn.addEventListener('click', playPrevious)
 
+
 ///Duration and timestamps
+
+
+function goToPoint () {
+let audio_duration = audio.duration;
+let audio_currentTime = audio.currentTime;
+
+let currentPrecent = (audio_currentTime / audio_duration) * 100;
+sliderCurrent.style.width = `${currentPrecent}%`;
+}
+
+function restartTimer() {
+    now.textContent = "00:00";
+}
+
+function timer() {
+    let minutes = Math.floor(audio.currentTime / 60);
+    let seconds = Math.floor(audio.currentTime - minutes  * 60);
+    now.textContent = minutes + ':' + seconds;
+
+    if (seconds < 10) {
+        now.textContent = minutes + ':' + '0' + seconds;
+    }
+}
+
+audio.addEventListener('timeupdate', timer)
+
+function goToOnclick(event) {
+    let audio_duration = audio.duration;
+
+    let bar_width = progress_bar.clientWidth;
+    let bar_onclick = event.offsetX;
+
+    audio.currentTime = (bar_onclick / bar_width) * audio_duration;
+}
+
+
+audio.addEventListener('timeupdate', goToPoint)
+progress_bar.addEventListener('click', goToOnclick)
+
 
