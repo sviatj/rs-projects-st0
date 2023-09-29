@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    background: white;
+}
+
+.header_container {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 20px;
+    border-bottom: 1px solid #000;
+    background: #FFF;
+}
+
+.h1 {
+color: #000;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.search {
+    display: flex;
+    justify-content: space-around;
+}
+
+form {
+    max-width: 250px;
+    width: 100%;
+    height: 32px;
+    border-radius: 7px;
+    background: #B4E6F5;
+    align-items: center;
+    text-align: center;
+}
+
+input {
+    margin-left: 20px;
+    background: transparent;
+    border: none;
+    width: 70%;
+    height: 100%;
+    outline: 0;
+}
+
+.search_icon {
+margin-top: 5px;
+width: 20px;
+height: 20px;
+}
+
+.button {
+cursor: pointer;
+margin: 0 auto;
+
+width: 200px;
+height: 50px;
+border-radius: 8px;
+background: #B4E6F5;
+border: none;
+
+color: #000;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+display: block;
+}
+
+.footer_container {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    background-color: #e7e7e7;
+}
+.year, .github, .logo {
+    width: 300px;
+    color: rgb(25, 24, 23);
+
+    text-align: center;
+}
+.github {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.year {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.rs-school-link {
+    width: 50px;
+    height: 30px;
+}
+
+.bottom_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    color: rgb(27, 26, 26);
+    font-family: Montserrat;
+    font-size: 20px;
+}
