@@ -2,8 +2,10 @@ const search = document.querySelector('.search');
 const searchContainer = document.querySelector('.search_container');
 const output = document.querySelector('.output');
 const button = document.querySelector('.button');
+const searchIcon = document.querySelector('.search_icon');
 
 const key = 'Kf8cMcean-HYKe7Ma6_NWnQnuUJrox0EqBDAjfzJN-s';
+
 
 let searchInput = "";
 let imgPage = 0;
