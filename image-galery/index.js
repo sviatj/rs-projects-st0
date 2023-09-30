@@ -7,42 +7,61 @@ const searchIcon = document.querySelector('.search_icon');
 const key = 'Kf8cMcean-HYKe7Ma6_NWnQnuUJrox0EqBDAjfzJN-s';
 
 
-let searchInput = "";
-let imgPage = 0;
 
+  let searchInput = "";
+  let imgPage = 1;
+  
+  
+  async function getImages() {
+    
+      if (searchInput.length === 0) {
+        searchInput = "nature";
+      }
+      
+      else if (searchInput.length > 0) {
+        searchInput = searchContainer.value;
+      }
 
-async function getImages() {
-    searchInput = searchContainer.value;
-    const url = `https://api.unsplash.com/search/photos?page=${imgPage}&query=${searchInput}&client_id=${key}&per_page=9`;
+      const url = `https://api.unsplash.com/search/photos?page=${imgPage}&query=${searchInput}&client_id=${key}&per_page=9`;
 
-    const res = await fetch(url);
-    const data = await res.json();
+      const res = await fetch(url);
+      const data = await res.json();
+      showImages(data);
 
-    showImages(data);
-    }
+      }
+  
+  
+    function showImages(data) {
+      data.results.map((value) => {
+          let imgUrl = value.urls.regular;
+          const img = document.createElement('img');
+          img.src = imgUrl;
+          img.alt = 'image';
+          output.append(img);
+    })
+  }
+  
+  
+    search.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if(imgPage === 1 || imgPage > 0) {
+          output.innerHTML = '';
+      }
+      getImages();
+    })
+  
+    button.addEventListener('click', () => {
+      imgPage++;
+  
+      getImages(); 
+    })
 
-
-  function showImages(data) {
-    data.results.map((value) => {
-        let imgUrl = value.urls.regular;
-        const img = document.createElement('img');
-        img.src = imgUrl;
-        img.alt = `image`;
-        output.append(img);
-  })
-}
-
-
-  search.addEventListener('submit', (event) => {
-    event.preventDefault();
-    if(imgPage === 1 || imgPage > 0) {
+    window.addEventListener('load', function() {
+      if(imgPage === 1 || imgPage > 0) {
         output.innerHTML = '';
     }
-    getImages();
-  })
+      getImages()
+    });
 
-  button.addEventListener('click', () => {
-    imgPage++;
 
-    getImages(); 
-  })
+
