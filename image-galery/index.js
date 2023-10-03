@@ -15,14 +15,14 @@ const key = 'Kf8cMcean-HYKe7Ma6_NWnQnuUJrox0EqBDAjfzJN-s';
   async function getImages() {
     
       if (searchInput.length === 0) {
-        searchInput = "nature";
+        searchInput = "mountains";
       }
       
       else if (searchInput.length > 0) {
         searchInput = searchContainer.value;
       }
 
-      const url = `https://api.unsplash.com/search/photos?page=${imgPage}&query=${searchInput}&client_id=${key}&per_page=9`;
+      const url = `https://api.unsplash.com/search/photos?page=${imgPage}&query=${searchInput}&client_id=${key}&per_page=9&orientation=landscape`;
 
       const res = await fetch(url);
       const data = await res.json();
@@ -42,26 +42,28 @@ const key = 'Kf8cMcean-HYKe7Ma6_NWnQnuUJrox0EqBDAjfzJN-s';
   }
   
   
-    search.addEventListener('submit', (event) => {
-      event.preventDefault();
-      if(imgPage === 1 || imgPage > 0) {
-          output.innerHTML = '';
-      }
-      getImages();
-    })
-  
-    button.addEventListener('click', () => {
-      imgPage++;
-  
-      getImages(); 
-    })
-
-    window.addEventListener('load', function() {
-      if(imgPage === 1 || imgPage > 0) {
+  search.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if(imgPage === 1 || imgPage > 0) {
         output.innerHTML = '';
     }
-      getImages()
-    });
+    getImages();
+  })
 
+  button.addEventListener('click', () => {
+    imgPage++;
 
+    getImages(); 
+  })
 
+  window.addEventListener('load', function() {
+    if(imgPage === 1 || imgPage > 0) {
+      output.innerHTML = '';
+  }
+    getImages()
+  });
+
+    searchIcon.addEventListener('click', () => {
+      output.innerHTML = '';
+      getImages();
+    })
