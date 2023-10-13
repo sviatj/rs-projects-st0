@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(#9c6216, #6e1e08);
+    margin: 0 auto;
+    height: 140vh;
+}
+
+@font-face {
+    font-family: 'f1';
+    src: url(assets/fonts/f1.woff);
+}
+
+@font-face {
+    font-family: 'f2';
+    src: url(assets/fonts/f2);
+}
+
+@font-face {
+    font-family: 'l1';
+    src: url(assets/fonts/l1);
+}
+
+@font-face {
+    font-family: 'l2';
+    src: url(assets/fonts/l2);
+}
+
+.main_container {
+    padding-top: 100px;
+    width: 60%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.game_name {
+    font-family: 'f1';
+    color: #e83e0f;
+    text-align: center;
+    font-size: 70px;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+
+}
+
+.start {
+    font-family: 'f1';
+    color: #e8d20f;
+    margin: 0 auto;
+    font-size: 70px;
+    letter-spacing: 5px;
+}
+
+.overlays {
+     display: none;
+}
+
+
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+
+
+    font-family: 'f1';
+    color: #e8a30f;
+    margin: 0 auto;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.cards_container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 25px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.card-to-open {
+    background-color: transparent;
+    height: 180px;
+    width: 130px;
+    margin: 0 auto;
+}
+
+.card-to-open:hover {
+    scale: 1.05;
+    transition: 0.2s ease-in;
+}
+
+
+
+
+
+
+
+.year, .github, .logo {
+    width: 300px;
+    color: rgb(25, 24, 23);
+
+    text-align: center;
+}
+.github {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.year {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.rs-school-link {
+    width: 50px;
+    height: 30px;
+}
+
+.bottom_block {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    bottom: 0;
+    height: 30px;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    color: rgb(27, 26, 26);
+    font-family: Montserrat;
+    font-size: 20px;
+}
+
+.card-to-open.change {
+    transform: rotateY(180deg);
+    transition: 1s;
+  }
+
+  .back, .front {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.card-to-open {
+    cursor: pointer;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
