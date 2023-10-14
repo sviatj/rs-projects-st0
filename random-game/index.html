@@ -9,42 +9,45 @@
     <title>Memory Game</title>
 </head>
 <body>
+    <div class="overlay">
     <div class="main_container">
     <h1 class="game_name">Memory Game</h1>
-
+    <div class="start"><p class="start-title">Click to begin</p></div>
+    <div class="restart"><p class="restart-title">Restart</p></div>
 
     <div class="stats">
-    <div class="timer">Time left</div>
-    <div class="atttempts">Flips</div>
+    <div class="timer">Time left: 60</div>
+    <div class="atttempts">Score: 0</div>
    </div>
+
 
    <div class="cards_container">
-    <div class="card-to-open"><img src="assets/images/vampire_card.png" class="front" alt="img"><img src="assets/images/Back.png" class="back" alt="img"> </div>
-    <div class="card-to-open"><img src="assets/images/pumpkin_card.png" class="front" alt="img"> <img src="assets/images/Back.png"class="back" alt="img"></div>
-    <div class="card-to-open"><img src="assets/images/eye_card.png" class="front" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
-    <div class="card-to-open"><img src="assets/images/ghost_card.png" class="front" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
-    <div class="card-to-open"><img src="assets/images/bat_card.png" class="front" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
-    <div class="card-to-open"><img src="assets/images/skull_card.png" class="front" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
-    <div class="card-to-open"><img src="assets/images/bones_card.png" class="front" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
-    <div class="card-to-open"><img src="assets/images/pumpkin_card.png" class="front" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
-    <div class="card-to-open"><img src="assets/images/ghost_card.png" class="front" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
-    <div class="card-to-open"><img src="assets/images/eye_card.png" class="front" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
-    <div class="card-to-open"><img src="assets/images/pot_card.png" class="front" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
-    <div class="card-to-open"><img src="assets/images/skull_card.png" class="front" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
-    <div class="card-to-open"><img src="assets/images/bat_card.png" class="front" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
-    <div class="card-to-open"><img src="assets/images/vampire_card.png" class="front" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
-    <div class="card-to-open"><img src="assets/images/bones_card.png" class="front" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
-    <div class="card-to-open"><img src="assets/images/pot_card.png" class="front" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="vamp"><img src="assets/images/vampire_card.png" class="face" alt="img"><img src="assets/images/Back.png" class="back" alt="img"> </div>
+    <div class="card-to-open" data-id="pump"><img src="assets/images/pumpkin_card.png" class="face" alt="img"> <img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="eye"><img src="assets/images/eye_card.png" class="face" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="ghost"><img src="assets/images/ghost_card.png" class="face" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="bat"><img src="assets/images/bat_card.png" class="face" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="skull"><img src="assets/images/skull_card.png" class="face" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="bone"><img src="assets/images/bones_card.png" class="face" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="pump"><img src="assets/images/pumpkin_card.png" class="face" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="ghost"><img src="assets/images/ghost_card.png" class="face" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="eye"><img src="assets/images/eye_card.png" class="face" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="pot"><img src="assets/images/pot_card.png" class="face" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="skull"><img src="assets/images/skull_card.png" class="face" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="bat"><img src="assets/images/bat_card.png" class="face" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="vamp"><img src="assets/images/vampire_card.png" class="face" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="bone"><img src="assets/images/bones_card.png" class="face" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
+    <div class="card-to-open" data-id="pot"><img src="assets/images/pot_card.png" class="face" alt="img"><img src="assets/images/Back.png"class="back" alt="img"></div>
    </div>
+</div>
 
-   </div>
 
-   <div class="overlays">
-   <div class="start">Click to begin</div>
+
+
    <div class="over">Game over</div>
     <div class="win">You Win!</div>
-    <div class="restart">Restart</div>
   </div>
+</div>
 </div>
 
 <footer>

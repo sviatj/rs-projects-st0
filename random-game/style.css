@@ -10,8 +10,11 @@ html {
 
 body {
     background: radial-gradient(#9c6216, #6e1e08);
+    background-color: rgba(59, 67, 76, 0.9);
     margin: 0 auto;
-    height: 140vh;
+    height: 160vh;
+    background-image: url("/random-game/assets/index.jpeg");
+    background-size: cover;
 }
 
 @font-face {
@@ -34,7 +37,10 @@ body {
     src: url(assets/fonts/l2);
 }
 
+
+
 .main_container {
+    z-index: -1;
     padding-top: 100px;
     width: 60%;
     margin: 0 auto;
@@ -51,33 +57,69 @@ body {
 
 }
 
-.start {
-    font-family: 'f1';
-    color: #e8d20f;
+.start, .restart {
+    z-index: 1;
+    cursor: pointer;
+    width: 340px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 81px;
+    background: #FB8733;
     margin: 0 auto;
-    font-size: 70px;
+}
+.restart {
+    display: none;
+}
+
+.restart-title  {
+    display: none;
+}
+
+.start:hover {
+    scale: 1.02;
+    transition: 1s;
+}
+.restart:hover {
+    scale: 1.02;
+    transition: 1s;
+}
+
+.start-title, .restart-title {
+    cursor: pointer;
+    color: #151410;
+    text-align: center;
+    align-items: center;
+    font-family: 'f1';
+    font-size: 40px;
+    margin: auto;
     letter-spacing: 5px;
+    padding-top: 30px;
 }
 
-.overlays {
-     display: none;
-}
-
-
+    
+    .overlay {
+      position: relative;
+      z-index: -1;
+      background-color: rgba(59, 67, 76, 0.9);
+      width: 100%;
+      height: 160vh;
+    }
 
 .stats {
   display: flex;
   justify-content: space-between;
 
 
-    font-family: 'f1';
+    font-family: 'Times New Roman', Times, serif;
     color: #e8a30f;
     margin: 0 auto;
+    font-weight: 500;
     font-size: 30px;
     letter-spacing: 5px;
 }
 
 .cards_container {
+    z-index: -1;
     display: grid;
     grid-template-columns: repeat(4, auto);
     gap: 25px;
@@ -96,12 +138,6 @@ body {
     scale: 1.05;
     transition: 0.2s ease-in;
 }
-
-
-
-
-
-
 
 .year, .github, .logo {
     width: 300px;
@@ -132,7 +168,7 @@ body {
     bottom: 0;
     height: 30px;
     font-size: 20px;
-    background-color: transparent;
+    background-color: azure;
 }
 
 a {
@@ -148,12 +184,12 @@ a {
     transition: 1s;
   }
 
-  .back, .front {
+  .back, .face {
     position: absolute;
     backface-visibility: hidden;
 }
 
-.front {
+.face {
     transform: rotateY(180deg);
 }
 
